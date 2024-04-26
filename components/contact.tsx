@@ -29,7 +29,7 @@ export default function Contact() {
     >
         <SectionHeading>Hire me</SectionHeading>
         <p className="text-gray-700 -mt-6 dark:text-white/80">
-            Please contact me directly at <a className='underline' href='mailto:tim.wiliusa@gmail.com'>tim.wiliusa@gmail.com</a> or through this form.
+            Please contact me directly at <a className='underline' href='mailto:tim.wiliusa@gmail.com'>tim.wiliusa@gmail.com</a> and do not use this form.
         </p>
 
         <form 
