@@ -8,6 +8,8 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi"
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from '@/context/active-section-context';
+
 
 
 
@@ -15,6 +17,8 @@ import { useSectionInView } from "@/lib/hooks";
 export default function Intro() {
 
     const {ref} = useSectionInView("Home", 0.5);
+    const {setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
+
 
   return (              
     <section 
@@ -78,26 +82,29 @@ export default function Intro() {
             delay: 0.1,
         }}
         >
-            <a
+            <Link
+            href='#contact'
             className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-            href="https://timothywiliusa.github.io/digital-resume/#/"
-            target="_blank">
-                Legacy version 
+            onClick={() => {
+                setActiveSection("Contact");
+                setTimeOfLastClick(Date.now());
+            }}>
+                Hire me 
                 <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition "/>
-            </a>
+            </Link>
             <a 
-            className="group bg-white px-7 py-3 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer border border-black/10" 
+            className="group bg-white px-7 py-3 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer borderBlack" 
             href="/CV.pdf">
                 Download CV 
                 <HiDownload />
             </a>
             <a 
-            className="bg-white  p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10" 
+            className="bg-white  p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack" 
             href="https://www.linkedin.com/in/timothy-wiliusa-13317418b/"
             target="_blank">
                 <BsLinkedin />
             </a>
-            <a className="bg-white  p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10" 
+            <a className="bg-white  p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack" 
             href="https://github.com/timothywiliusa"
             target="_blank">
                 <FaGithubSquare />
