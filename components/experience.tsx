@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from 'react'
 import SectionHeading from './section-header'
@@ -7,12 +7,12 @@ import 'react-vertical-timeline-component/style.min.css'
 import { experiencesData } from '@/lib/data'
 import { useSectionInView } from '@/lib/hooks'
 import { useTheme } from "@/context/theme-context";
-import { LuGraduationCap } from "react-icons/lu";
+import { LuGraduationCap } from 'react-icons/lu';
 
 
 export default function Experience() {
 
-  const {ref} = useSectionInView("Experience", 0.5);
+  const { ref } = useSectionInView("Experience", 0.5);
   const { theme } = useTheme();
 
   return (
@@ -21,10 +21,8 @@ export default function Experience() {
         ref={ref}
         className='scroll-mt-28 mb-28 sm:mb-40'
     >
-        <SectionHeading>My experience</SectionHeading>
-        <VerticalTimeline
-        lineColor=""
-        >
+        <SectionHeading>My experiences</SectionHeading>
+        <VerticalTimeline lineColor="">
             {
                 experiencesData.map((item, index) => (
                     <React.Fragment key={index}>
@@ -63,7 +61,11 @@ export default function Experience() {
                             </p>
                         </VerticalTimelineElement>
                     </React.Fragment>
-                ))}
+                ))
+            }
+            <React.Fragment>
+
+            
                 <VerticalTimelineElement
                             contentStyle={{
                                 background:
@@ -92,27 +94,17 @@ export default function Experience() {
                             }}
 
                         >
-                            <h3 className='font-semibold capitalize'>Graduated  as a Bachelors of Computer Science from Oregon State University</h3>
+                            <h3 className='font-semibold'>Graduated  as a Bachelors of Computer Science</h3> 
+                            <h4 className='font-medium capitalize'>Oregon State University</h4>
                             <p className='font-normal !mt-0'>Corvallis, OR</p>
                             <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                                With focus on:
-                                <br/>
-                              
-                                    <li>
-                                    <span className='font-bold'>Web Development</span>
-                                    </li>
-                               
-                            
-                                <br/>
-                                <span className='font-bold'>Cloud Development</span>
-                                <br/>
-                                <span className='font-bold'>Human-Computer Interactions</span>
-                                
-                                
-                                
-                                 
+                                Focus:
+                                <li><span className='font-bold'>Front End Web Development</span></li>
+                                <li><span className='font-bold'>Cloud Development</span> ,<span className='italic'> API Design</span></li>
+                                <li><span className='font-bold'>Human-Computer Interactions</span> ,<span className='italic'> UI/UX</span></li>
                             </p>
                         </VerticalTimelineElement>
+                        </React.Fragment>
         </VerticalTimeline>
     </section>
   )

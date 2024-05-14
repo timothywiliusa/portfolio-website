@@ -60,14 +60,7 @@ export const experiencesData = [
     icon: React.createElement(BsHddNetwork),
     date: "2022 - present",
   },
-  {
-    title: "Graduated  as a Bachelors of Computer Science from OSU",
-    location: "Corvallis, OR",
-    description:
-      "CS Major with a focus in *Web Development*, **Cloud Development** & Human-Computer Interactions",
-    icon: React.createElement(LuGraduationCap),
-    date: "2024",
-  },
+  
 ] as const;
 
 export const projectsData = [

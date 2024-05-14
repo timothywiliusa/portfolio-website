@@ -2,11 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi"
-import { FaGithubSquare } from "react-icons/fa";
+import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
+import { HiDownload } from 'react-icons/hi'
+import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from '@/context/active-section-context';
 
@@ -93,18 +93,18 @@ export default function Intro() {
                 <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition "/>
             </Link>
             <a 
-            className="group bg-white px-7 py-3 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer borderBlack" 
+             className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10" 
             href="/CV.pdf">
                 Download CV 
                 <HiDownload />
             </a>
             <a 
-            className="bg-white  p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack" 
+            className="bg-white  p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60" 
             href="https://www.linkedin.com/in/timothy-wiliusa-13317418b/"
             target="_blank">
                 <BsLinkedin />
             </a>
-            <a className="bg-white  p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack" 
+            <a className="bg-white  p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60" 
             href="https://github.com/timothywiliusa"
             target="_blank">
                 <FaGithubSquare />
