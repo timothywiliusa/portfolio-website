@@ -10,10 +10,6 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 
 
-console.log("printing key")
-console.log(process.env.NEXT_PUBLIC_API_KEY)
-
-
 const firebaseConfig = {
     // FIREBASE_CONFIGURATION
     apiKey: process.env.NEXT_PUBLIC_API_KEY,
