@@ -64,7 +64,7 @@ export default function Experience() {
                         </VerticalTimelineElement>
                     </React.Fragment>
                 ))}
-                <VerticalTimelineElement
+                {/* <VerticalTimelineElement
                             contentStyle={{
                                 background:
                                     theme === "light" ? 
@@ -111,8 +111,8 @@ export default function Experience() {
                                 
                                 
                                  
-                            </p>
-                        </VerticalTimelineElement>
+                            </p> */}
+                        {/* </VerticalTimelineElement> */}
         </VerticalTimeline>
     </section>
   )

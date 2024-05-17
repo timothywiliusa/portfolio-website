@@ -64,7 +64,7 @@ export const experiencesData = [
     title: "Graduated  as a Bachelors of Computer Science from OSU",
     location: "Corvallis, OR",
     description:
-      "CS Major with a focus in *Web Development*, **Cloud Development** & Human-Computer Interactions",
+      "CS Major with a focus in Web Development, Cloud Development & Human-Computer Interactions",
     icon: React.createElement(LuGraduationCap),
     date: "2024",
   },

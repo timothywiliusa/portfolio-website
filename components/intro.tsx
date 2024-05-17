@@ -20,6 +20,9 @@ export default function Intro() {
     const {setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
 
 
+    // console.log("printing key")
+    // console.log(process.env.NEXT_PUBLIC_API_KEY)
+
   return (              
     <section 
         ref={ref}
