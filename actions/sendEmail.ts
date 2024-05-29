@@ -9,16 +9,15 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 
-
 const firebaseConfig = {
     // FIREBASE_CONFIGURATION
-    apiKey: process.env.NEXT_PUBLIC_API_KEY,
-    authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
-    databaseURL: process.env.NEXT_PUBLIC_DATABASE_URL,
-    projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
-    storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
-    messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
-    appId: process.env.NEXT_PUBLIC_APP_ID
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: process.env.DATABASE_URL,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID,
+    appId: process.env.APP_ID
 };
 
 // Initialize Firebase
@@ -50,7 +49,7 @@ export const sendEmail = async (form: FormData) => {
 
     let data;
     try {
-        data = await addDoc(collection(db, "users"), {
+        data = await addDoc(collection(db, "emails"), {
             email: senderEmail,
             message: message,
         });
@@ -63,13 +62,10 @@ export const sendEmail = async (form: FormData) => {
         };
     }
 
-    // console.log(data);
-    console.log("you are here -\n");
-
     console.log("Document written with ID: ", data.id);
-
+    console.log("returning")
+    
     return {
         data: data.id
-        //error: null,
     };
 }
