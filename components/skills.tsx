@@ -68,7 +68,7 @@ export default function Skills() {
                                 once: true,
                             }}
                             custom={index}
-                            className='bg-white border borderBlack rounded-xl px-5 py-3'
+                            className='bg-white border borderBlack rounded-xl px-5 py-3 dark:bg-red-900 dark:text-yellow-200'
                         >{skill}</motion.li>
                     ))
                 }
