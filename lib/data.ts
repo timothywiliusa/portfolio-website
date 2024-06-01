@@ -94,38 +94,48 @@ export const projectsData = [
   },
 ] as const;
 
-export const skillsData = [
-  "Responsive Design", 
-  "Agile",
-  "Scrum Master",
-  "InclusiveMag", 
-  "Binary Storage", 
-  "XML", 
-  "Automation", 
-  "DVC Systems",
-  "Git",
-  "ssh",
-  "C#",
-  "C++",
+export const stackData = [
+
   "TypeScript",
   "React",
-  "Next.js",
-  "Tailwind",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Docker",
-  "Figma",
-  "PowerBI",
-  "Apollo",
   "Vercel",
-  "Express",
-  "REST",
-  "SQL",
-  "NSQL",
-  "Framer Motion",
-  "Avaya",
-  "MIFARE"
-
+  "MongoDB",
+  "Docker"
 
   ] as const;
+
+  export const skillsData = [
+    "Responsive Design", 
+    "Agile",
+    "Scrum Master",
+    "InclusiveMag", 
+    "Binary Storage", 
+    "XML", 
+    "Automation", 
+    "DVC Systems",
+    "Git",
+    "ssh",
+    "C#",
+    "C++",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Tailwind",
+    "MongoDB",
+    "Redux",
+    "GraphQL",
+    "Docker",
+    "Figma",
+    "PowerBI",
+    "Apollo",
+    "Vercel",
+    "Express",
+    "REST",
+    "SQL",
+    "NSQL",
+    "Framer Motion",
+    "Avaya",
+    "MIFARE"
+  
+  
+    ] as const;
