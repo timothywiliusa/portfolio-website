@@ -1,6 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
+import { MdOutlineBusinessCenter } from "react-icons/md";
 import { LuGraduationCap } from "react-icons/lu";
 import { BsHddNetwork } from "react-icons/bs";
 import inclusivemag from "@/public/inclusivemag.png"
@@ -61,12 +62,20 @@ export const experiencesData = [
     date: "2022 - present",
   },
   {
-    title: "Graduated  as a Bachelors of Computer Science from OSU",
+    title: "Graduated, Bachelors of Computer Science, Oregon State University",
     location: "Corvallis, OR",
     description:
       "CS Major with a focus in Web Development, Cloud Development & Human-Computer Interactions",
     icon: React.createElement(LuGraduationCap),
-    date: "2024",
+    date: "Spring 2024",
+  },
+  {
+    title: "Looking for a full time Position",
+    location: "Corvallis, OR",
+    description:
+      "CS Major with a focus in Web Development, Cloud Development & Human-Computer Interactions",
+    icon: React.createElement(MdOutlineBusinessCenter),
+    date: "Desired start date: August 12",
   },
 ] as const;
 

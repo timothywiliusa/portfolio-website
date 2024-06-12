@@ -31,7 +31,7 @@ export default function Skills() {
             id='skills'
             className=' mb-10 max-w-[53rem] scroll-mt-28 text-center sm:mb-20'
         >
-            <SectionHeading>I continually improve my stack</SectionHeading>
+            <SectionHeading>I continually try to improve my stack</SectionHeading>
             <ul className='flex flex-wrap justify-center gap-2 text-lg text-gray-800'>
                 {
                     stackData.map((stack,index) => (

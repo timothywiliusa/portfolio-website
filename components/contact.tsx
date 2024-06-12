@@ -13,6 +13,7 @@ export default function Contact() {
 
     const {ref} = useSectionInView("Contact");
 
+    
     const formRef = useRef(document.createElement("form"))
 
 

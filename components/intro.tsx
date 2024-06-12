@@ -29,6 +29,10 @@ export default function Intro() {
         id="home" 
         className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'
     >
+        <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-orange-900"></div>
+
+        <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-red-900"></div>
+
         <div className='flex items-center justify-center'>
             <div className="relative">
                 <motion.div
@@ -101,17 +105,24 @@ export default function Intro() {
                 Download CV 
                 <HiDownload />
             </a>
-            <a 
-            className="bg-white  p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-gray-900 text-white dark:bg-zinc-950 dark:text-red-600" 
-            href="https://www.linkedin.com/in/timothy-wiliusa-13317418b/"
-            target="_blank">
-                <BsLinkedin />
-            </a>
-            <a className="bg-white  p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
-            href="https://github.com/timothywiliusa"
-            target="_blank">
-                <FaGithubSquare />
-            </a>
+            <div className="flex flex-row gap-2">
+                <a 
+                    className="bg-white  p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-gray-900 text-white dark:bg-zinc-950 dark:text-red-600" 
+                    href="https://www.linkedin.com/in/timothy-wiliusa-13317418b/"
+                    target="_blank"
+                >
+                    <BsLinkedin />
+                </a>
+                <a 
+                    className="bg-white  p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
+                    href="https://github.com/timothywiliusa"
+                    target="_blank"
+                >
+                    <FaGithubSquare />
+                </a>
+
+            </div>
+           
         </motion.div>
 
 
