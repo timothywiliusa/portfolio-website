@@ -27,14 +27,14 @@ export default function Intro() {
     <section 
         ref={ref}
         id="home" 
-        className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'
+        className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] bg-none'
     >
         <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-orange-900"></div>
 
         <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-red-900"></div>
 
-        <div className='flex items-center justify-center'>
-            <div className="relative">
+        <div className='flex items-center justify-center bg-none'>
+            <div className="relative bg-none">
                 <motion.div
                     initial={{opacity: 0, scale: 0}}
                     animate={{opacity: 1, scale: 1}}
@@ -51,13 +51,13 @@ export default function Intro() {
                     height="192" 
                     quality="95" 
                     priority={true}
-                    className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl dark:border-amber-800"
+                    className=" bg-transparent h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl dark:border-amber-800"
                     />
 
                 </motion.div>
                 
                 <motion.span 
-                    className="absolute bottom-0 right-0 text-4xl"
+                    className=" bg-transparent absolute bottom-0 right-0 text-4xl"
                     initial={{opacity: 0, scale: 0}}
                     animate={{opacity: 1, scale: 1}}
                     transition={{
@@ -73,7 +73,7 @@ export default function Intro() {
             </div>
         </div>
 
-        <motion.h1 className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl dark:text-gray-200"
+        <motion.h1 className="bg-transparent -z-10 mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl dark:text-gray-200"
         initial={{opacity: 0, y: 100}}
         animate={{opacity: 1, y: 0}}
         // animate to appear from bellow 

@@ -7,6 +7,8 @@ import { BsHddNetwork } from "react-icons/bs";
 import inclusivemag from "@/public/inclusivemag.png"
 import linearhashing from "@/public/linearhashing.png";
 import personalportfolio from "@/public/personalportfolio.png";
+import quantumvox from "@/public/quantum-vox.png";
+
 
 export const links = [
   {
@@ -71,7 +73,7 @@ export const experiencesData = [
   },
   {
     title: "Looking for a full time Position",
-    location: "Corvallis, OR",
+    location: "Portland, OR",
     description:
       "CS Major with a focus in Web Development, Cloud Development & Human-Computer Interactions",
     icon: React.createElement(MdOutlineBusinessCenter),
@@ -81,11 +83,20 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Linear Hashing using an encripted external storage",
+    title: "Quantum Vox",
+    description:
+      "This is a CRM-integrated web page with functionalities such as call scheduling, contact me form, and 3D paralax scrolling",
+    tags: ["Framer", "Formspark", "Cal.com", "Paralax Scrolling", "3D objects animations"],
+    imageUrl: quantumvox,
+    href: "https://sustained-europe-864696.framer.app"
+  },
+  {
+    title: "Linear Hashing",
     description:
       "This program takes accepts an xml or csv file and stores its values into a relational database that is writen in binary.",
     tags: ["C", "C++", "memory management","encrypt/decrypt", "binary I/O"],
     imageUrl: linearhashing,
+    href: "https://sustained-europe-864696.framer.app"
   },
   {
     title: "GenderMag",
@@ -93,58 +104,48 @@ export const projectsData = [
       "I worked as a student associate in a startup project for a year. We used the GenderMag research and integrated inslusivemag examinations into our scrum.",
     tags: ["Figma", "Inclusivemag", "Scrum", "Agile", "Tailwind"],
     imageUrl: inclusivemag,
-  },
-  {
-    title: "Personal Portfolio",
-    description:
-      "A public web app for quick overview of what I do. It features smooth scrolling, cross-platform usability, and 100% TypeScript!",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind", "Framer", "Vercel"],
-    imageUrl: personalportfolio,
+    href: "https://gendermag.org"
   },
 ] as const;
 
 export const stackData = [
-
   "TypeScript",
   "React",
   "Vercel",
   "MongoDB",
   "Docker"
+] as const;
 
-  ] as const;
-
-  export const skillsData = [
-    "Responsive Design", 
-    "Agile",
-    "Scrum Master",
-    "InclusiveMag", 
-    "Binary Storage", 
-    "XML", 
-    "Automation", 
-    "DVC Systems",
-    "Git",
-    "ssh",
-    "C#",
-    "C++",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Tailwind",
-    "MongoDB",
-    "Redux",
-    "GraphQL",
-    "Docker",
-    "Figma",
-    "PowerBI",
-    "Apollo",
-    "Vercel",
-    "Express",
-    "REST",
-    "SQL",
-    "NSQL",
-    "Framer Motion",
-    "Avaya",
-    "MIFARE"
-  
-  
-    ] as const;
+export const skillsData = [
+  "Responsive Design", 
+  "Agile",
+  "Scrum Master",
+  "InclusiveMag", 
+  "Binary Storage", 
+  "XML", 
+  "Automation", 
+  "DVC Systems",
+  "Git",
+  "ssh",
+  "C#",
+  "C++",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Tailwind",
+  "MongoDB",
+  "Redux",
+  "GraphQL",
+  "Docker",
+  "Figma",
+  "PowerBI",
+  "Apollo",
+  "Vercel",
+  "Express",
+  "REST",
+  "SQL",
+  "NSQL",
+  "Framer Motion",
+  "Avaya",
+  "MIFARE"
+] as const;
