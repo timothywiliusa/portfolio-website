@@ -12,8 +12,8 @@ import quantumvox from "@/public/quantum-vox.png";
 
 export const links = [
   {
-    name: "Home",
-    hash: "#home",
+    name: "Resume",
+    hash: "#resume",
   },
   {
     name: "About",
