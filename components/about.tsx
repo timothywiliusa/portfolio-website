@@ -19,7 +19,7 @@ export default function About() {
         transition={{ delay: 0.175 }}
         id="about"
     >
-        <SectionHeading number='03.'>About me</SectionHeading>
+        <SectionHeading>About me</SectionHeading>
         <div className='flex flex-col gap-4 text-base'>
         <p className="">
 
