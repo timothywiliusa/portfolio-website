@@ -18,7 +18,7 @@ export default function Projects() {
       id="projects" 
       className='scroll-mt-28 mb-28'
     >
-      <SectionHeading>My Projects</SectionHeading>
+      <SectionHeading number='01.'>My Latest Projects</SectionHeading>
       <div>
         {
           projectsData.map((project, index) => (
