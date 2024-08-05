@@ -21,7 +21,7 @@ export default function Experience() {
         ref={ref}
         className='scroll-mt-28 mb-28 sm:mb-40'
     >
-        <SectionHeading number='02.'>Timeline</SectionHeading>
+        <SectionHeading>Timeline</SectionHeading>
         <VerticalTimeline
         lineColor=""
         >
@@ -65,7 +65,7 @@ export default function Experience() {
                         </VerticalTimelineElement>
                     </React.Fragment>
                 ))}
-        </VerticalTimeline>
+        </VerticalTimeline> 
     </section>
   )
 }
