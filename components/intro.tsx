@@ -111,7 +111,7 @@ export default function Intro() {
         animate={{opacity: 1, y: 0}}
         // animate to appear from bellow 
         >
-            <div className="max-w-[410px] md:max-w-[550px]">I specialize in building (and occasionally designing) full stack web applications, with 3 years of experience in React, Next, Node.js, and SQL. Currently I'm focused on building accessible,human-centered products at <Link href='https://quantum-vox.com' target='_blank'  className="text-[#ff5555]">Quantum Vox</Link>.</div>
+            <div className="max-w-[410px] md:max-w-[550px]">I specialize in building (and occasionally designing) full stack web applications, with 5 years of experience in React, Next, Node.js, and SQL. Currently I'm focused on building accessible,human-centered products at <Link href='https://quantum-vox.com' target='_blank'  className="text-[#ff5555]">Quantum Vox</Link>.</div>
 
            
         </motion.h2>
@@ -130,15 +130,15 @@ export default function Intro() {
             <div className="flex gap-2 flex-col md:flex-row">
 
                 <a 
-                className="min-w-[177px] group bg-white px-7 py-3 text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm" 
+                className="min-w-[205px] group bg-white pl-7 py-3 text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm" 
                 href="/timothy-wiliusa.pdf">
-                    Download CV 
+                    Download Resume 
                     <HiDownload className="opacity-70 group-hover:translate-y-1 transition "/>
                 </a>
 
                 <Link
                 href='#contact'
-                className="min-w-[177px] group bg-gray-900 text-white pl-9 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-zinc-950 dark:text-red-600  dark:border-4 dark:border-zinc-950 text-sm"
+                className="min-w-[177px] group bg-gray-900 text-white md:pl-9 pl-14 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-zinc-950 dark:text-red-600  dark:border-4 dark:border-zinc-950 text-sm"
                 onClick={() => {
                     setActiveSection("Contact");
                     setTimeOfLastClick(Date.now());
