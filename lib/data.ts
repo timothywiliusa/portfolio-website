@@ -100,18 +100,18 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Database Replication",
+    title: "Database Replication & Containerization",
     description:
-      "I worked as a student associate in a startup project for a year. We used the GenderMag research and integrated inslusivemag examinations into our scrum.",
-    tags: ["Figma", "Inclusivemag", "Scrum", "Agile", "Tailwind"],
+      "\"Yelpy\" is a fully automated and encrypted cloud development application that initiates a yelp-like API and database from your local machine. Tested with Postman API Platform.",
+    tags: ["Node.js", "MongoDB", "Docker", "Redis", "bcrypt.js"],
     imageUrl: dbrepl,
     href: "https://gendermag.org"
   },
   {
-    title: "Quantum Vox",
+    title: "Full Stack Development",
     description:
-      "This is a CRM-integrated web page with functionalities such as call scheduling, contact me form, and 3D paralax scrolling",
-    tags: ["Framer", "Formspark", "Cal.com", "Paralax Scrolling", "3D animation"],
+      "I design and host websites based on each client's wants and needs. With features such as a customer relationship management (CRM) and content management system (CMS).",
+    tags: [  "Framer", "3D animations","Paralax Scrolling","Cal.com"],
     imageUrl: quantumvox,
     href: "https://sustained-europe-864696.framer.app"
   },
