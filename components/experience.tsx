@@ -23,7 +23,9 @@ export default function Experience() {
     >
         <SectionHeading>Timeline</SectionHeading>
         <VerticalTimeline
-        lineColor=""
+        lineColor={theme === "light" ? 
+            "#f3f4f6" : 
+            "#f9fafb"}
         >
             {
                 experiencesData.map((item, index) => (
@@ -51,15 +53,15 @@ export default function Experience() {
                                 background:
                                     theme === "light" ?
                                     "white" :
-                                    "rgba(255, 255, 255, 0.15)",
-                                fontSize: "1.5rem"
+                                    "#09090b",
+                                fontSize: "1.5rem",
+                                color: theme === "dark" ? "#ff5555" : ""
                             }}
 
                         >
-                            <h3 className='font-semibold capitalize'>{item.title}</h3>
-                            <p className='font-normal !mt-0'>{item.employer}</p>
-                            <p className='font-normal !mt-0'>{item.location}</p>
-                            <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+                            <h3 className='fira-code-regular text-[#ff5555] text-lg mb-2'>{item.title}</h3>
+                            <p className='font-normal text-sm !mt-0'>{item.employer} in {item.location}</p>
+                            <p className="!mt-1 !font-normal text-sm  text-gray-700 dark:text-white/75">
                                 {item.description}
                             </p>
                         </VerticalTimelineElement>

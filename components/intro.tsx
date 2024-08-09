@@ -130,7 +130,7 @@ export default function Intro() {
             <div className="flex gap-2 flex-col md:flex-row">
 
                 <a 
-                className="min-w-[205px] group bg-white pl-7 py-3 text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm" 
+                className="borderBlack min-w-[205px] group bg-white pl-7 py-3 text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm" 
                 href="/timothy-wiliusa.pdf">
                     Download Resume 
                     <HiDownload className="opacity-70 group-hover:translate-y-1 transition "/>

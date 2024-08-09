@@ -43,6 +43,60 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Looking for a full time Position",
+    employer: "Located",
+    location: "USA",
+    description:
+      "CS Major with a focus in Web Development, Cloud Development & Human-Computer Interactions",
+    icon: React.createElement(MdOutlineBusinessCenter),
+    date: "Desired start date: October 7, 2024",
+  },
+  {
+    title: "Bachelor of Computer Science",
+    employer: "Oregon State University",
+    location: "Corvallis, OR",
+    description:
+      "CS Major with a focus in Web Development, Cloud Development, and Human-Computer Interactions.",
+    icon: React.createElement(LuGraduationCap),
+    date: "Spring 2024",
+  },
+  {
+    title: "Full Stack Developer",
+    employer: "Quantum Vox",
+    location: "Portland, OR",
+    description:
+      "Designed and Deployed custom full stack applications.",
+    icon: React.createElement(MdOutlineBusinessCenter),
+    date: "2024 - active",
+  },
+  {
+    title: "Network Analyst",
+    employer: "Oregon State University",
+    location: "Corvallis, OR",
+    description:
+      "Provided email based support using the OSU ticketing system. Responsible to set up and managed back-end VoIP and SIP networking.",
+    icon: React.createElement(BsHddNetwork),
+    date: "2022 - 2024",
+  },
+  {
+    title: "Junior Developer",
+    employer: "Pt. Trisakti Mustika Graphika",
+    location: "Semarang, Indonesia",
+    description:
+      "A 6 month internship where I designed and built aworker tool using C++ & Visual Studio. The tool allows workers to easily create binary files. I also improved UI of other existing tools",
+    icon: React.createElement(FaReact),
+    date: "2021 - 2022",
+  },
+  {
+    title: "IT Intern",
+    employer: "Golden Eagle Inc.",
+    location: "Philadelphia, PA",
+    description:
+      "I provided IT support for the company, and managed a team tasked with the migration of paper records to a digital system.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2020 - 2021",
+  },
+  {
     title: "React Developer",
     employer: "HazAdapt, Inc.",
     location: "Corvallis, OR",
@@ -51,51 +105,9 @@ export const experiencesData = [
     icon: React.createElement(CgWorkAlt),
     date: "2020 - 2021",
   },
-  {
-    title: "IT Intern",
-    employer: "HazAdapt, Inc.",
-    location: "Philadelphia, PA",
-    description:
-      "I provided IT support for the company, and managed a team tasked with the migration of paper records to a digital system.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2020 - 2021",
-  },
-  {
-    title: "Junior Developer",
-    employer: "HazAdapt, Inc.",
-    location: "Semarang, Indonesia",
-    description:
-      "Designed and built worker tools using C++ & Visual Studio, also improved UI of existing tools",
-    icon: React.createElement(FaReact),
-    date: "2021 - 2022",
-  },
-  {
-    title: "Network Analyst",
-    employer: "HazAdapt, Inc.",
-    location: "Corvallis, OR",
-    description:
-      "Set up and managed back-end VoIP and SIP networking. Also provided email based support using the OSU ticketing system",
-    icon: React.createElement(BsHddNetwork),
-    date: "2022 - present",
-  },
-  {
-    title: "Graduated, Bachelors of Computer Science, Oregon State University",
-    employer: "HazAdapt, Inc.",
-    location: "Corvallis, OR",
-    description:
-      "CS Major with a focus in Web Development, Cloud Development & Human-Computer Interactions",
-    icon: React.createElement(LuGraduationCap),
-    date: "Spring 2024",
-  },
-  {
-    title: "Looking for a full time Position",
-    employer: "HazAdapt, Inc.",
-    location: "Portland, OR",
-    description:
-      "CS Major with a focus in Web Development, Cloud Development & Human-Computer Interactions",
-    icon: React.createElement(MdOutlineBusinessCenter),
-    date: "Desired start date: August 12",
-  },
+  
+ 
+  
 ] as const;
 
 export const projectsData = [
