@@ -37,7 +37,7 @@ export default function Experience() {
                                     "#f3f4f6" : 
                                     "rgba(255, 255, 255, 0.05)",
                                 boxShadow: "none",
-                                border: "1px solid rgba(0, 0, 0, 0.05)",
+                                border: "1px solid rgba(0, 0, 0, 1)",
                                 textAlign: "left",
                                 padding: "1.3rem 2rem"
                             }}
@@ -48,6 +48,7 @@ export default function Experience() {
                                     "0.4rem solid rgba(255, 255, 255, 0.5)",
                             }}
                             date={item.date}
+                            dateClassName="text-white"
                             icon={item.icon}
                             iconStyle={{
                                 background:
@@ -59,9 +60,9 @@ export default function Experience() {
                             }}
 
                         >
-                            <h3 className='fira-code-regular text-[#ff5555] text-lg mb-2'>{item.title}</h3>
-                            <p className='font-normal text-sm !mt-0'>{item.employer} in {item.location}</p>
-                            <p className="!mt-1 !font-normal text-sm  text-gray-700 dark:text-white/75">
+                            <h3 className='fira-code-regular text-[#ff5555] text-lg '>{item.title}</h3>
+                            <p className='font-normal text-xs !mt-0 pb-3'>{item.employer} in {item.location}</p>
+                            <p className="!mt-1 !font-normal pb-5 text-gray-700 dark:text-white/75">
                                 {item.description}
                             </p>
                         </VerticalTimelineElement>

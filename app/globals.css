@@ -4,11 +4,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 html {
-    --line-color: #e3e7eb;
+    /* --line-color: #e3e7eb; */
 }
 
 .borderBlack{
     @apply border border-black/10
+}
+.inlineLink{
+  @apply 
+  
+  text-[#ff5555] 
+  dark:sm:text-white 
+  dark:hover:text-[#ff5555]
+  hover:text-[#ff5555] 
+  hover:underline
 }
 
 .fira-code-light {

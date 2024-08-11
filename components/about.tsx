@@ -4,6 +4,7 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import SectionHeading from './section-header';
 import { useSectionInView } from '@/lib/hooks';
+import Link from 'next/link';
 
 
 export default function About() {
@@ -19,20 +20,17 @@ export default function About() {
         transition={{ delay: 0.175 }}
         id="about"
     >
-        <SectionHeading>About me</SectionHeading>
+        <SectionHeading>My Story</SectionHeading>
         <div className='flex flex-col gap-4 text-base'>
-        <p className="">
-
-          I have experience developing and designing software for the web, from simple landing pages to progressive web applications. I strive to create software that not only functions efficiently under the hood, but also provides intuitive, pixel-perfect user experiences.
-
+          <p className="">
+            Back in 2020, I decided to try my hand at creating a React site for a startup with a bunch of college friends and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for a <Link href='https://quantum-vox.com' target='_blank' className="inlineLink">church</Link>, a <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">start-up</Link>, an <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">outsourcing company</Link>, a <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">huge corporation</Link>, and a <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">digital marketing agency</Link>.
           </p>
           <p className="">
-
-          I love learning new and better ways to create seamless user experiences with clean, efficient, and scalable code. I consider work an ongoing education, and I'm always looking for opportunities to work with those who are willing to share their knowledge as much as I want to learn.
+            My main focus these days is building accessible user interfaces for our customers at <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">Quantum Vox</Link>. I most enjoy building software in the sweet spot where design and engineering meet — things that look good but are also built well under the hood. 
+            {/* In my free time, I've also released an online video course that covers everything you need to know to build a web app with the Spotify API. */}
           </p>
           <p className="">
-          At the end of the day, my primary goal is to create something beautiful with people that bring out the best in me.
-          When I'm not in front of a computer screen, I'm probably snowboarding, traveling, petting dogs, or learning a new song on my piano.
+            At the end of the day, my primary goal is to create something beautiful with people that bring out the best in me. When I'm not in front of a computer screen, I'm at the beach surfing, traveling, petting dogs, learning a new song on my piano, or making moves at your local chess tournament.
           </p>
 
         </div>

@@ -1,9 +1,11 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { MdOutlineBusinessCenter } from "react-icons/md";
+import { FaReact , FaLaptop, FaStackOverflow} from "react-icons/fa";
+import { MdOutlineBusinessCenter, MdOutlineWorkspaces} from "react-icons/md";
 import { LuGraduationCap } from "react-icons/lu";
 import { BsHddNetwork } from "react-icons/bs";
+import { PiStackOverflowLogoBold } from "react-icons/pi";
+
 import inclusivemag from "@/public/inclusivemag.png"
 import dbrepl from "@/public/dockermongo.png"
 
@@ -43,7 +45,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Looking for a full time Position",
+    title: "Looking for a full time position",
     employer: "Located",
     location: "USA",
     description:
@@ -66,7 +68,7 @@ export const experiencesData = [
     location: "Portland, OR",
     description:
       "Designed and Deployed custom full stack applications.",
-    icon: React.createElement(MdOutlineBusinessCenter),
+    icon: React.createElement(FaStackOverflow),
     date: "2024 - active",
   },
   {
@@ -80,11 +82,11 @@ export const experiencesData = [
   },
   {
     title: "Junior Developer",
-    employer: "Pt. Trisakti Mustika Graphika",
+    employer: "PT Trisakti Mustika Graphika",
     location: "Semarang, Indonesia",
     description:
       "A 6 month internship where I designed and built aworker tool using C++ & Visual Studio. The tool allows workers to easily create binary files. I also improved UI of other existing tools",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(FaLaptop),
     date: "2021 - 2022",
   },
   {
@@ -102,7 +104,7 @@ export const experiencesData = [
     location: "Corvallis, OR",
     description:
       "I provided IT support for the company, and managed a team tasked with the migration of paper records to a digital system.",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(FaReact),
     date: "2020 - 2021",
   },
   
@@ -111,21 +113,22 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
-  {
-    title: "Database Replication & Containerization",
-    description:
-      "\"Yelpy\" is a fully automated and encrypted cloud development application that initiates a yelp-like API and database from your local machine. Tested with Postman API Platform.",
-    tags: ["Node.js", "MongoDB", "Docker", "Redis", "bcrypt.js"],
-    imageUrl: dbrepl,
-    href: "https://gendermag.org"
-  },
+
   {
     title: "Full Stack Development",
     description:
       "I design and host websites based on each client's wants and needs. With features such as a customer relationship management (CRM) and content management system (CMS).",
     tags: [  "Framer", "3D animations","Paralax Scrolling","Cal.com"],
     imageUrl: quantumvox,
-    href: "https://sustained-europe-864696.framer.app"
+    href: ""
+  },
+  {
+    title: "Database Replication & Containerization",
+    description:
+      "\"Yelpy\" is a fully automated and encrypted cloud development application that initiates a yelp-like API and database from your local machine. Tested with Postman API Platform.",
+    tags: ["Node.js", "MongoDB", "Docker", "Redis", "bcrypt.js"],
+    imageUrl: dbrepl,
+    href: ""
   },
   {
     title: "Linear Hashing",
@@ -133,8 +136,9 @@ export const projectsData = [
       "This program takes an xml or csv file and stores its data in a relational data file writen in binary.",
     tags: ["C", "C++", "memory management","encrypt/decrypt", "binary I/O"],
     imageUrl: linearhashing,
-    href: "https://sustained-europe-864696.framer.app"
+    href: ""
   },
+
  
 ] as const;
 

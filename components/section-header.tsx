@@ -12,7 +12,7 @@ export default function SectionHeading(
     
     <div className='mb-7 grid justify-center items-center'>
       <div>
-        <h2 className='inline ml-1 text-3xl font-medium capitalize'>{children}</h2>
+        <h2 className='inline ml-1 text-3xl font-medium capitalize dark:text-gray-50'>{children}</h2>
       </div>
    
 
