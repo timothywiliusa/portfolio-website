@@ -14,7 +14,7 @@ export default function About() {
   return (              
     <motion.section 
         ref={ref}
-        className='mb-28 max-w-[45rem] leading-8 sm:mb-40 scroll-mt-28'
+        className='mb-28 max-w-[53rem] leading-8 sm:mb-40 scroll-mt-28'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.175 }}
@@ -23,7 +23,7 @@ export default function About() {
         <SectionHeading>My Story</SectionHeading>
         <div className='flex flex-col gap-4 text-base'>
           <p className="">
-            Back in 2020, I decided to try my hand at creating a React site for a startup with a bunch of college friends and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for a <Link href='https://quantum-vox.com' target='_blank' className="inlineLink">church</Link>, a <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">start-up</Link>, an <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">outsourcing company</Link>, a <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">huge corporation</Link>, and a <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">digital marketing agency</Link>.
+            Back in 2020, I decided to try my hand at creating a React site for a startup with a bunch of college friends and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for a <Link href='https://calvin-church.org' target='_blank' className="inlineLink">church</Link>, a <Link href='https://www.hazadapt.com' target='_blank'  className="inlineLink">start-up</Link>, an <Link href='https://goldeneaglestaffingservices.com' target='_blank'  className="inlineLink">outsourcing company</Link>, a <Link href='https://trisakti.co.id' target='_blank'  className="inlineLink">huge corporation</Link>, and a <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">digital marketing agency</Link>.
           </p>
           <p className="">
             My main focus these days is building accessible user interfaces for our customers at <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">Quantum Vox</Link>. I most enjoy building software in the sweet spot where design and engineering meet — things that look good but are also built well under the hood. 

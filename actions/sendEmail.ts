@@ -52,6 +52,7 @@ export const sendEmail = async (form: FormData) => {
         data = await addDoc(collection(db, "emails"), {
             email: senderEmail,
             message: message,
+            date: Date()
         });
 
     } catch (error: unknown) {
