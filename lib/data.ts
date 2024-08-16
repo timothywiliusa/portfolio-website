@@ -88,7 +88,7 @@ export const experiencesData = [
     employer: "PT Trisakti Mustika Graphika",
     location: "Semarang, Indonesia",
     description:
-      "In this 6 month internship I designed and built aworker tool using C++ & Visual Studio. The tool allows workers to easily create binary files. I also improved UI of other existing tools",
+      "In this 6 month internship I designed and built worker tools using C++ & Visual Studio. The tool allows workers to easily create binary files. I also improved UI of other existing tools",
     icon: React.createElement(FaLaptop),
     date: "2021 - 2022",
   },
@@ -108,7 +108,7 @@ export const experiencesData = [
     description:
       "This start-up was my first introduction to React. They had a Wix site and wanted to create their own scalable site and hired student interns who wanted to learn web development.",
     icon: React.createElement(FaReact),
-    date: "2020 - 2021",
+    date: "2020",
   },
   
  
