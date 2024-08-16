@@ -39,7 +39,7 @@ export default function Skills() {
                 </div>
             </div>
             <p className='text-lg mb-16 '>
-                Agile, <Link className='inlineLink' href='https://www.scrum.org/resources/what-scrum-module'>Scrum Master</Link>,  C, C++, <Link className='inlineLink' href='https://www.npmjs.com/package/bcrypt'> Password Encryption</Link>, Responsive Design, <Link className='inlineLink' href='https://gendermag.org'>InclusiveMag</Link>, CSS Animations, Box Model, Lazy Loading, DVC Systems, <Link className='inlineLink' href='https://www.mongodb.com/docs/manual/replication/'>Database Replication</Link>, SEO Optimization, CRM Integration, Content Management System (CMS)
+                Agile, <Link className='inlineLink' href='https://www.scrum.org/resources/what-scrum-module' target='_blank'>Scrum Master</Link>,  C, C++, <Link className='inlineLink' href='https://www.npmjs.com/package/bcrypt' target='_blank'> Password Encryption</Link>, Responsive Design, <Link className='inlineLink' href='https://gendermag.org' target='_blank'>InclusiveMag</Link>, CSS Animations, Box Model, Lazy Loading, DVC Systems, <Link className='inlineLink' href='https://www.mongodb.com/docs/manual/replication/' target='_blank'>Database Replication</Link>, SEO Optimization, CRM Integration, Content Management System (CMS)
             </p>
             <div className='mb-7 grid  items-center'>
                 <div>
