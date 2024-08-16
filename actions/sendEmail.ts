@@ -32,6 +32,7 @@ export const sendEmail = async (form: FormData) => {
 
     const senderEmail = form.get("senderEmailRef");
     const message = form.get("messageRef");
+    const myDate = Date().toLocaleLowerCase
 
     // simple server-side validation
     if (!validateString(senderEmail, 500)) {
@@ -52,7 +53,7 @@ export const sendEmail = async (form: FormData) => {
         data = await addDoc(collection(db, "emails"), {
             email: senderEmail,
             message: message,
-            date: Date()
+            date: myDate
         });
 
     } catch (error: unknown) {

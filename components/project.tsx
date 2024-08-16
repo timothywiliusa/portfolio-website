@@ -27,7 +27,7 @@ export default function Project({
   
   
     return (
-      <motion.div
+      <motion.section
         ref={ref}
         style={{
           scale: scaleProgess,
@@ -37,7 +37,7 @@ export default function Project({
       >
       <Link href={href} target="_blank" >
       
-      <section className='
+      <div className='
       
       bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden relative
       lg:pr-8 lg:h-[20rem] 
@@ -95,9 +95,9 @@ export default function Project({
         
         
   
-     </section>
+     </div>
      </Link>
-     </motion.div>
+     </motion.section>
   
   
     ) 

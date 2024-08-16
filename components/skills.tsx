@@ -49,9 +49,9 @@ export default function Skills() {
             <ul className='flex flex-wrap  gap-2 text-lg text-gray-800 mb-16'>
                 {
                     stackData.map((stack,index) => (
-                        <Link href={stack.href} target="_blank">
+                        <Link href={stack.href} target="_blank" key={index}>
                             <motion.li 
-                                key={index}
+                                
                                 variants={fadeInAnimationVariants}
                                 initial="initial"
                                 whileInView="animate"
@@ -73,9 +73,9 @@ export default function Skills() {
             <ul className='flex flex-wrap gap-2 text-lg text-gray-800'>
                 {
                     techData.map((tech,index) => (
-                        <Link href={tech.href} target="_blank">
+                        <Link href={tech.href} target="_blank" key={index}>
                             <motion.li 
-                                key={index}
+                                
                                 variants={fadeInAnimationVariants}
                                 initial="initial"
                                 whileInView="animate"

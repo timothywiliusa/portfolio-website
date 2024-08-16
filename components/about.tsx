@@ -5,6 +5,7 @@ import {motion} from 'framer-motion';
 import SectionHeading from './section-header';
 import { useSectionInView } from '@/lib/hooks';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 export default function About() {
@@ -21,19 +22,48 @@ export default function About() {
         id="about"
     >
         <SectionHeading>My Story</SectionHeading>
-        <div className='flex flex-col gap-4 text-base'>
-          <p className="">
-            Back in 2020, I decided to try my hand at creating a React site for a startup with a bunch of college friends and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for a <Link href='https://calvin-church.org' target='_blank' className="inlineLink">church</Link>, a <Link href='https://www.hazadapt.com' target='_blank'  className="inlineLink">start-up</Link>, an <Link href='https://goldeneaglestaffingservices.com' target='_blank'  className="inlineLink">outsourcing company</Link>, a <Link href='https://trisakti.co.id' target='_blank'  className="inlineLink">huge corporation</Link>, and a <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">digital marketing agency</Link>.
-          </p>
-          <p className="">
-            My main focus these days is building accessible user interfaces for our customers at <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">Quantum Vox</Link>. I most enjoy building software in the sweet spot where design and engineering meet — things that look good but are also built well under the hood. 
-            {/* In my free time, I've also released an online video course that covers everything you need to know to build a web app with the Spotify API. */}
-          </p>
-          <p className="">
-            At the end of the day, my primary goal is to create something beautiful with people that bring out the best in me. When I'm not in front of a computer screen, I'm at the beach surfing, traveling, petting dogs, learning a new song on my piano, or making moves at your local chess tournament.
-          </p>
+        <div className='flex flex-col-reverse lg:flex-row gap-8 '>
+
+          <div className='flex flex-col gap-4 text-base'>
+            <p className="">
+              Back in 2020, I decided to try my hand at creating a React site for a <Link href='https://www.hazadapt.com' target='_blank'  className="inlineLink">start-up</Link> with a couple of college friends and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for a <Link href='https://calvin-church.org' target='_blank' className="inlineLink">church</Link>, an <Link href='https://goldeneaglestaffingservices.com' target='_blank'  className="inlineLink">outsourcing company</Link>, a <Link href='https://trisakti.co.id' target='_blank'  className="inlineLink">huge corporation</Link>, and a <Link href='https://quantum-vox.com' target='_blank'  className="inlineLink">digital marketing agency</Link>.
+            </p>
+            <p className="">
+              As a software engineer, I enjoy bridging the gap between engineering and design — combining my technical knowledge with my keen eye for design to create a beautiful product. My goal is to always build applications that are scalable and efficient under the hood while providing engaging, pixel-perfect user experiences.
+              {/* In my free time, I've also released an online video course that covers everything you need to know to build a web app with the Spotify API. */}
+            </p>
+            <p className="">
+              At the end of the day, my primary goal is to create something beautiful with people that bring out the best in me. When I'm not in front of a computer screen, I'm at the beach surfing, traveling, petting dogs, learning a new song on my piano, or making moves at your local chess tournament.
+            </p>
+
+          </div>
+
+          <Image 
+              src="/author.jpg" 
+              alt="Tim" 
+              width="1000" 
+              height="1000" 
+              quality="95" 
+              priority={true}
+              className="bg-transparent h-[420px] w-[350px] rounded-2xl object-cover shadow-2xl hidden lg:block"
+              />
+
+
+          <div className='grid items-center justify-center'>
+            <Image 
+              src="/author2.jpg" 
+              alt="Tim" 
+              width="500" 
+              height="500" 
+              quality="100" 
+              priority={true}
+              className="bg-transparent w-full rounded-2xl object-cover shadow-2xl lg:hidden"
+              />
+
+          </div>
 
         </div>
+        
         
         {/* add photo here  */}
 

@@ -91,13 +91,15 @@ export default function Intro() {
         // animate to appear from bellow 
         >
             
-            <h1 className="
+            <span 
+            className="
              font-bold 
-            dark:text-gray-200"
-            >Timothy Wiliusa.
+            dark:text-gray-200">
+                <h1 className="inline" >Timothy Wiliusa</h1>. 
+            </span>
             <br/>
-            <span className="text-gray-600 dark:text-gray-400">I build things for the web.</span> 
-            </h1> 
+            <span className="text-gray-600 dark:text-gray-400 font-bold">I build things for the web.</span> 
+            
         
         </motion.div>
 

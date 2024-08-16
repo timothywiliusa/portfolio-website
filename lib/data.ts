@@ -123,23 +123,23 @@ export const projectsData = [
       "I design and host websites based on each client's wants and needs. With features such as a customer relationship management (CRM) and content management system (CMS).",
     tags: [  "Framer", "3D animations","Paralax Scrolling","Cal.com"],
     imageUrl: quantumvox,
-    href: ""
+    href: "https://quantum-vox.com"
   },
   {
     title: "Database Replication & Containerization",
     description:
-      "\"Yelpy\" is a fully automated and encrypted cloud development application that initiates a yelp-like API and database from your local machine. Tested with Postman API Platform.",
+      "\"Yelpy\" is a fully automated and encrypted cloud development application that initiates a yelp-like API and database from your local machine. Tested with Postman API.",
     tags: ["Node.js", "MongoDB", "Docker", "Redis", "bcrypt.js"],
     imageUrl: dbrepl,
-    href: ""
+    href: "https://github.com/timothywiliusa/mongodb-replication"
   },
   {
     title: "Linear Hashing",
     description:
-      "This program takes an xml or csv file and stores its data in a relational data file writen in binary.",
+       "\"Hashy\" is a C++ program that I created for my Database Management class. It uses external",
     tags: ["C", "C++", "memory management","encrypt/decrypt", "binary I/O"],
     imageUrl: linearhashing,
-    href: ""
+    href: "https://github.com/timothywiliusa/DBMS-external-sorting"
   },
 
  
@@ -236,7 +236,7 @@ export const techData = [
   {
     title: "Apollo",
     icon: React.createElement(SiApollographql),
-    href: "https://www.apollographql.com/why-graphql?utm_term=apollo%20graphql&utm_campaign=Google_Search_Brand_ApolloGraphQL&utm_source=google&utm_medium=cpc&hsa_acc=6083416509&hsa_cam=20595484542&hsa_grp=152489462805&hsa_ad=708259492505&hsa_src=g&hsa_tgt=kwd-775346800312&hsa_kw=apollo%20graphql&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gbraid=0AAAAABiDyba-7yfllhyi2SNEpAco_9HZe&gclid=Cj0KCQjw5ea1BhC6ARIsAEOG5py33lFFTr7-hOIyOUzGwdlMN3O3vxcfU2Rfo1kWkSi2GZAzOz6BpewaAub2EALw_wcB"
+    href: "https://www.apollographql.com/why-graphql"
   },
   {
     title: "PowerBI",

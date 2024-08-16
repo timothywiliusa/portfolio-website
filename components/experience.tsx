@@ -12,7 +12,7 @@ import { LuGraduationCap } from "react-icons/lu";
 
 export default function Experience() {
 
-  const {ref} = useSectionInView("Experience", 0.5);
+  const {ref} = useSectionInView("Experience", 0.1);
   const { theme } = useTheme();
 
   return (
