@@ -28,7 +28,7 @@ export default function Intro() {
         ref={ref}
         id="resume" 
         className='
-        pt-28 xs:pt-40 sm:pt-46 lg:pt-52
+        pt-36 xs:pt-40 sm:pt-46 lg:pt-52
         w-full max-w-[1100px] 
         
         scroll-mt-[100rem] 
@@ -105,8 +105,8 @@ export default function Intro() {
 
        
         <motion.h2 className="
-        mb-5 !leading-[1.5]  bg-transparent -z-10 
-      
+        mb-8 !leading-[1.5]  bg-transparent -z-10
+        
         md:mb-10"
         initial={{opacity: 0, y: 100}}
         animate={{opacity: 1, y: 0}}
@@ -132,7 +132,9 @@ export default function Intro() {
 
                 <a 
                 className="borderBlack min-w-[205px] group bg-white pl-7 py-3 text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm" 
-                href="/timothy-wiliusa.pdf">
+                href="/timothy-wiliusa.pdf"
+                target="_blank"
+                >
                     Download Resume 
                     <HiDownload className="opacity-70 group-hover:translate-y-1 transition "/>
                 </a>

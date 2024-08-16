@@ -52,7 +52,7 @@ export const experiencesData = [
     employer: "Located",
     location: "USA",
     description:
-      "CS Major with a focus in Web Development, Cloud Development & Human-Computer Interactions",
+      "Full stack developer - Cloud API developer - Mobile application developer - React developer - Angular developer ",
     icon: React.createElement(MdOutlineBusinessCenter),
     date: "Desired start date: October 7, 2024",
   },
@@ -70,7 +70,7 @@ export const experiencesData = [
     employer: "Quantum Vox",
     location: "Portland, OR",
     description:
-      "Designed and Deployed custom full stack applications.",
+      "Quantum Vox is a digital marketing agency based in Portland, Oregon, where I collaborated with designers and other developers to ensure thoughtful and consistent user experience for their clients.",
     icon: React.createElement(FaStackOverflow),
     date: "2024 - active",
   },
@@ -79,7 +79,7 @@ export const experiencesData = [
     employer: "Oregon State University",
     location: "Corvallis, OR",
     description:
-      "Provided email based support using the OSU ticketing system. Responsible to set up and managed back-end VoIP and SIP networking.",
+      "This was my campus job! I provided email based support using the OSU ticketing system. Responsible to set up and managed back-end VoIP and SIP networking.",
     icon: React.createElement(BsHddNetwork),
     date: "2022 - 2024",
   },
@@ -88,7 +88,7 @@ export const experiencesData = [
     employer: "PT Trisakti Mustika Graphika",
     location: "Semarang, Indonesia",
     description:
-      "A 6 month internship where I designed and built aworker tool using C++ & Visual Studio. The tool allows workers to easily create binary files. I also improved UI of other existing tools",
+      "In this 6 month internship I designed and built aworker tool using C++ & Visual Studio. The tool allows workers to easily create binary files. I also improved UI of other existing tools",
     icon: React.createElement(FaLaptop),
     date: "2021 - 2022",
   },
@@ -97,16 +97,16 @@ export const experiencesData = [
     employer: "Golden Eagle Inc.",
     location: "Philadelphia, PA",
     description:
-      "I provided IT support for the company, and managed a team tasked with the migration of paper records to a digital system.",
+      "This is another 6 month internship where I provided IT support for the company, and managed a team tasked with the migration of paper records to a digital system.",
     icon: React.createElement(CgWorkAlt),
     date: "2020 - 2021",
   },
   {
-    title: "React Developer",
+    title: "Intern React Developer",
     employer: "HazAdapt, Inc.",
     location: "Corvallis, OR",
     description:
-      "I provided IT support for the company, and managed a team tasked with the migration of paper records to a digital system.",
+      "This start-up was my first introduction to React. They had a Wix site and wanted to create their own scalable site and hired student interns who wanted to learn web development.",
     icon: React.createElement(FaReact),
     date: "2020 - 2021",
   },
