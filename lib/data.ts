@@ -70,7 +70,7 @@ export const experiencesData = [
     employer: "Quantum Vox",
     location: "Portland, OR",
     description:
-      "Quantum Vox is a digital marketing agency based in Portland, Oregon, where I collaborated with designers and other developers to ensure thoughtful and consistent user experience for their clients.",
+      "Quantum Vox is a digital marketing agency based in Portland, Oregon, where I managed a collaboration of designers and other developers to ensure thoughtful and consistent user experience for their clients.",
     icon: React.createElement(FaStackOverflow),
     date: "2024 - active",
   },
@@ -79,7 +79,7 @@ export const experiencesData = [
     employer: "Oregon State University",
     location: "Corvallis, OR",
     description:
-      "This was my campus job! I provided email based support using the OSU ticketing system. Responsible to set up and managed back-end VoIP and SIP networking.",
+      "This was my campus job. I provided phone and email based support using the OSU ticketing system and was responsible to set up and manage back-end VoIP and SIP networking.",
     icon: React.createElement(BsHddNetwork),
     date: "2022 - 2024",
   },
