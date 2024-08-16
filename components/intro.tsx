@@ -112,7 +112,7 @@ export default function Intro() {
         animate={{opacity: 1, y: 0}}
         // animate to appear from bellow 
         >
-            <div className="max-w-[410px] md:max-w-[550px]">I specialize in building (and occasionally designing) full stack web applications, with 5 years of experience in React, Next, Node.js, and SQL. Currently I'm focused on building accessible,human-centered products at <Link href='https://quantum-vox.com' target='_blank'  className="text-[#ff5555] dark:text-white dark:hover:text-[#ff5555] hover:text-[#ff5555] hover:underline">Quantum Vox</Link>.</div>
+            <div className="max-w-[410px] md:max-w-[550px]">I specialize in building (and occasionally designing) full stack web applications, with 5 years of experience in React, Next, Node.js, and SQL. Currently I'm focused on building accessible, human-centered products at <Link href='https://quantum-vox.com' target='_blank'  className="text-[#ff5555] dark:text-white dark:hover:text-[#ff5555] hover:text-[#ff5555] hover:underline">Quantum Vox</Link>.</div>
 
            
         </motion.h2>
