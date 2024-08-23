@@ -97,7 +97,7 @@ export const experiencesData = [
     employer: "Golden Eagle Inc.",
     location: "Philadelphia, PA",
     description:
-      "This is another 6 month internship where I provided IT support for the company, and managed a team tasked with the migration of paper records to a digital system.",
+      "A 9 month internship where I provided IT support for the company and managed a team tasked with the migration of paper records to a digital system.",
     icon: React.createElement(CgWorkAlt),
     date: "2020 - 2021",
   },
@@ -106,13 +106,10 @@ export const experiencesData = [
     employer: "HazAdapt, Inc.",
     location: "Corvallis, OR",
     description:
-      "This start-up was my first introduction to React. They had a Wix site and wanted to create their own scalable site and hired student interns who wanted to learn web development.",
+      "This start-up was my first introduction to React. They had a Wix site and wanted to create their own scalable site and hired student interns looking to learn web development.",
     icon: React.createElement(FaReact),
-    date: "2020",
+    date: "2019",
   },
-  
- 
-  
 ] as const;
 
 export const projectsData = [
@@ -126,7 +123,7 @@ export const projectsData = [
     href: "https://quantum-vox.com"
   },
   {
-    title: "Database Replication & Containerization",
+    title: "Cloud API",
     description:
       "\"Yelpy\" is a fully automated and encrypted cloud development application that initiates a yelp-like API and database from your local machine. Tested with Postman API.",
     tags: ["Node.js", "MongoDB", "Docker", "Redis", "bcrypt.js"],
@@ -136,7 +133,7 @@ export const projectsData = [
   {
     title: "Linear Hashing",
     description:
-       "\"Hashy\" is a C++ program that I created for my Database Management class. It uses external",
+       "\"Hashy\" is a C++ program that I created for my Database Management class. It uses linear hashing to create memory buckets and order them to minimize the load time of data searching.",
     tags: ["C", "C++", "memory management","encrypt/decrypt", "binary I/O"],
     imageUrl: linearhashing,
     href: "https://github.com/timothywiliusa/DBMS-external-sorting"

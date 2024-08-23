@@ -33,7 +33,7 @@ export default function About() {
               {/* In my free time, I've also released an online video course that covers everything you need to know to build a web app with the Spotify API. */}
             </p>
             <p className="">
-              At the end of the day, my primary goal is to create something beautiful with people that bring out the best in me. When I'm not in front of a computer screen, I'm at the beach surfing, traveling, petting dogs, learning a new song on my piano, or making moves at your local chess tournament.
+              At the end of the day, my primary goal is to create something beautiful with people that bring out the best in me. When I'm not in front of a computer screen, I'm at the beach surfing, traveling, petting dogs, learning a new song on my piano, or simply making moves at your local chess tournament.
             </p>
 
           </div>

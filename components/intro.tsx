@@ -131,17 +131,17 @@ export default function Intro() {
             <div className="flex gap-2 flex-col md:flex-row">
 
                 <a 
-                className="borderBlack min-w-[205px] group bg-white pl-7 py-3 text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm" 
+                className="borderBlack min-w-[170px] group bg-white pl-7 py-3 text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm" 
                 href="/timothy-wiliusa.pdf"
                 target="_blank"
                 >
-                    Download Resume 
+                    Resume.pdf
                     <HiDownload className="opacity-70 group-hover:translate-y-1 transition "/>
                 </a>
 
                 <Link
                 href='#contact'
-                className="min-w-[177px] group bg-gray-900 text-white md:pl-9 pl-14 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-zinc-950 dark:text-red-600  dark:border-4 dark:border-zinc-950 text-sm"
+                className="min-w-[170px] group bg-gray-900 text-white pl-9 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-zinc-950 dark:text-red-600  dark:border-4 dark:border-zinc-950 text-sm"
                 onClick={() => {
                     setActiveSection("Contact");
                     setTimeOfLastClick(Date.now());

@@ -34,7 +34,7 @@ export default function Contact() {
         >
             <SectionHeading>Say Hi!</SectionHeading>
             <p className="text-gray-700 -mt-6 dark:text-white/80">
-                You may message me directly at <a className='underline' href='mailto:tim.wiliusa@gmail.com'>tim.wiliusa@gmail.com</a> or through this form.
+                You may message me directly at <a className='underline' href='mailto:work@timothywiliusa.com'>work@timothywiliusa.com</a> or through this form.
             </p>
 
             <form 
