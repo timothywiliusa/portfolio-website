@@ -155,13 +155,13 @@ export default function Intro() {
                 <div className="flex flex-row gap-2 w-full justify-center">
                     <a 
                         className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
-                        href="https://www.linkedin.com/in/timothy-wiliusa-13317418b/"
+                        href="https://www.linkedin.com/in/timothy-wiliusa/"
                         target="_blank"
                     >
                         <BsLinkedin />
                     </a>
                     <a 
-                        className="bg-white  p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
+                        className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
                         href="https://github.com/timothywiliusa"
                         target="_blank"
                     >

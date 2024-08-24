@@ -1,12 +1,12 @@
 "use server";
 
-import React from "react";
 // import { Resend } from "resels
 import { validateString, getErrorMessage } from "../lib/utils";
 // import ContactFormEmail from "@/lib/email-template";
 
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { MdSubject } from "react-icons/md";
 
 
 const firebaseConfig = {
@@ -48,10 +48,19 @@ export const sendEmail = async (form: FormData) => {
     }
 
     let data;
+    const hostmail = "work@timothy.wiliusa.com"
     try {
         data = await addDoc(collection(db, "emails"), {
-            email: senderEmail,
-            message: message,
+            from: senderEmail,
+            to: [hostmail],
+            message: {
+                subject: 'Message from your personal website!',
+                text: `Message: ${message}`,
+                html: `<div>
+                    <p><label>email: </label>${senderEmail}</p>
+                    <p><label>message: </label>${message}</p>
+                    </div>`
+            }
         });
 
     } catch (error: unknown) {
