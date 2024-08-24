@@ -50,7 +50,7 @@ export const sendEmail = async (form: FormData) => {
     let data;
     const hostmail = "work@timothy.wiliusa.com"
     try {
-        data = await addDoc(collection(db, "emails"), {
+        data = await addDoc(collection(db, "mail"), {
             from: senderEmail,
             to: [hostmail],
             message: {
