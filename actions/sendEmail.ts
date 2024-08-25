@@ -48,13 +48,14 @@ export const sendEmail = async (form: FormData) => {
     }
 
     let data;
-    const hostmail = "work@timothy.wiliusa.com"
+    const hostmail = "work@timothywiliusa.com"
     try {
         data = await addDoc(collection(db, "mail"), {
             from: senderEmail,
             to: [hostmail],
+            replyTo: senderEmail,
             message: {
-                subject: 'Message from your personal website!',
+                subject: 'Message from your contact me form!',
                 text: `Message: ${message}`,
                 html: `<div>
                     <p><label>email: </label>${senderEmail}</p>
