@@ -29,7 +29,6 @@ const db = getFirestore(app);
 // const resend = new Resend(process.env.RESEND_API_KEY);
 export const sendEmail = async (form: FormData) => {
 
-
     const senderEmail = form.get("senderEmailRef");
     const message = form.get("messageRef");
 
@@ -50,12 +49,13 @@ export const sendEmail = async (form: FormData) => {
     let data;
     const hostmail = "work@timothywiliusa.com"
     try {
-        data = await addDoc(collection(db, "mail"), {
+ 
+        await addDoc(collection(db, "mail"), {
             from: [hostmail],
-            to: senderEmail,
-            replyTo: hostmail,
+            to: hostmail,
+            replyTo: senderEmail,
             message: {
-                subject: 'Message from your contact me form!',
+                subject: 'Message from your contact form',
                 text: `Message: ${message}`,
                 html: `<div>
                     <p><label>email: </label>${senderEmail}</p>
@@ -63,6 +63,20 @@ export const sendEmail = async (form: FormData) => {
                     </div>`
             }
         });
+
+        data = await addDoc(collection(db, "mail"), {
+            from: [hostmail],
+            to: senderEmail,
+            replyTo: hostmail,
+            message: {
+                subject: 'Your message have been received!',
+                text: `Message: ${message}`,
+                html: `<div>
+                    <p><label>message: </label>${message}</p>
+                    </div>`
+            }
+        });
+
 
     } catch (error: unknown) {
         console.log("errors have happened")
