@@ -85,7 +85,7 @@ export const experiencesData = [
   },
   {
     title: "Junior Developer",
-    employer: "PT Trisakti Mustika Graphika",
+    employer: "PT Trisakti",
     location: "Semarang, Indonesia",
     description:
       "In this 6 month internship I designed and built worker tools using C++ & Visual Studio. The tool allows workers to easily create binary files. I also improved UI of other existing tools",

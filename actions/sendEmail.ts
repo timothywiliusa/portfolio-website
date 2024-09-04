@@ -47,7 +47,7 @@ export const sendEmail = async (form: FormData) => {
     }
 
     let data;
-    const hostmail = "work@timothywiliusa.com"
+    const hostmail = "info@timothywiliusa.com"
     try {
  
         await addDoc(collection(db, "mail"), {
@@ -70,9 +70,10 @@ export const sendEmail = async (form: FormData) => {
             replyTo: hostmail,
             message: {
                 subject: 'Your message have been received!',
-                text: `Message: ${message}`,
+                text: `This is an automated confirmation receipt. Your message: ${message}`,
                 html: `<div>
-                    <p><label>message: </label>${message}</p>
+                    <p><label>This is an automated confirmation receipt.</label>
+                    <p><label>Your message: </label>${message}</p>
                     </div>`
             }
         });
