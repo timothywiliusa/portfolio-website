@@ -72,8 +72,8 @@ export const sendEmail = async (form: FormData) => {
                 subject: 'Your message have been received!',
                 text: `This is an automated confirmation receipt. Your message: ${message}`,
                 html: `<div>
-                    <p><label>This is an automated confirmation receipt.</label>
                     <p><label>Your message: </label>${message}</p>
+                    <p><label>This is an automated confirmation receipt from timothywiliusa.com 😉</label></p>
                     </div>`
             }
         });
