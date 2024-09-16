@@ -15,6 +15,7 @@ import { VscVscode } from "react-icons/vsc";
 import dbrepl from "@/public/dockermongo.png"
 import linearhashing from "@/public/linearhashing.png";
 import quantumvox from "@/public/quantum-vox.png";
+import calvin from "@/public/project-calvin.png";''
 
 
 export const links = [
@@ -137,6 +138,14 @@ export const projectsData = [
     tags: ["C", "C++", "memory management","encrypt/decrypt", "binary I/O"],
     imageUrl: linearhashing,
     href: "https://github.com/timothywiliusa/DBMS-external-sorting"
+  },
+  {
+    title: "Microservice Architechture",
+    description:
+      "I designed and built a web-application for a church. This project implements Next Auth Beta using PostgreSql and Prisma, and audio files are stored using Firebase storage.",
+    tags: [  "Next.Js", "Next/Auth","Firebase","Lazy Loading"],
+    imageUrl: calvin,
+    href: "https://calvin-presbyterian.vercel.app/"
   },
 
  

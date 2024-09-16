@@ -1,6 +1,6 @@
 "use client";
 
-import React , {useRef} from 'react'
+import {useRef} from 'react'
 import SectionHeading from './section-header'
 import { motion } from 'framer-motion'
 import { useSectionInView } from '@/lib/hooks';
