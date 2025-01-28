@@ -49,13 +49,13 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Looking for a full time position",
+    title: "Looking for a full time job",
     employer: "Located",
     location: "USA",
     description:
       "Full stack developer - Cloud API developer - Mobile application developer - React developer - Angular developer ",
     icon: React.createElement(MdOutlineBusinessCenter),
-    date: "Desired start date: October 7, 2024",
+    date: "Desired start date: March 10, 2025",
   },
   {
     title: "Bachelor of Computer Science",

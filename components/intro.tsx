@@ -7,6 +7,8 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi"
 import { FaGithubSquare } from "react-icons/fa";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { TfiEmail } from "react-icons/tfi";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from '@/context/active-section-context';
 
@@ -120,7 +122,7 @@ export default function Intro() {
 
         <motion.div className="
         flex flex-col items-center gap-2 
-        md:flex-row md:items-start 
+        sm:items-start sm:flex-row
         text-lg font-medium"
         initial={{opacity: 0, y: 100}}
         animate={{opacity: 1, y: 0}}
@@ -128,7 +130,7 @@ export default function Intro() {
             delay: 0.1,
         }}
         >
-            <div className="flex gap-2 flex-col md:flex-row">
+            <div className="flex gap-2 flex-col sm:flex-row justify-start items-start">
 
                 <a 
                 className="borderBlack min-w-[170px] group bg-white pl-7 py-3 text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm" 
@@ -152,6 +154,28 @@ export default function Intro() {
 
            
             
+               
+          
+            </div>
+
+            <div className="
+            flex flex-col gap-2 w-full justify-center
+            sm:flex-row sm:w-fit
+            ">
+                <div className="flex flex-row gap-2 w-full justify-center">
+                    <a 
+                        className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
+                        href="mailto:work@timothywiliusa.com"
+                    >
+                        <TfiEmail />
+                    </a>
+                    <a 
+                        className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
+                        href="tel:+1-541-248-4595"
+                    >
+                        <BiSolidPhoneCall />
+                    </a>
+                </div>
                 <div className="flex flex-row gap-2 w-full justify-center">
                     <a 
                         className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
@@ -166,11 +190,13 @@ export default function Intro() {
                         target="_blank"
                     >
                         <FaGithubSquare />
-                    </a>
-
+                    </a> 
                 </div>
-          
+
+               
+                
             </div>
+         
         </motion.div>
 
 
