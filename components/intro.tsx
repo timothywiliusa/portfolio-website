@@ -13,6 +13,28 @@ import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from '@/context/active-section-context';
 
 
+// lazy loading
+import dynamic from 'next/dynamic'
+const AnimatedEmail = dynamic(
+    () => import('./animated-icon-email'), {
+    loading: () => <p>Loading...</p> , ssr: false}, 
+)
+const AnimatedCall = dynamic(
+() => import('./animated-icon-call'), {
+loading: () => <p>Loading...</p> , ssr: false}, 
+)
+
+const AnimatedLinkedIn = dynamic(
+() => import('./animated-icon-linkedin'), {
+loading: () => <p>Loading...</p> , ssr: false}, 
+)
+
+const AnimatedFork = dynamic(
+() => import('./animated-icon-fork'), {
+loading: () => <p>Loading...</p> , ssr: false}, 
+)
+
+
 
 
 
@@ -121,8 +143,8 @@ export default function Intro() {
 
 
         <motion.div className="
-        flex flex-col items-center gap-2 
-        sm:items-start sm:flex-row
+        flex flex-col gap-2 
+        items-center xs:items-start 
         text-lg font-medium"
         initial={{opacity: 0, y: 100}}
         animate={{opacity: 1, y: 0}}
@@ -130,7 +152,7 @@ export default function Intro() {
             delay: 0.1,
         }}
         >
-            <div className="flex gap-2 flex-col sm:flex-row justify-start items-start">
+            <div className="flex gap-2 flex-row justify-start items-start">
 
                 <a 
                 className="borderBlack min-w-[170px] group bg-white pl-7 py-3 text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm" 
@@ -141,6 +163,50 @@ export default function Intro() {
                     <HiDownload className="opacity-70 group-hover:translate-y-1 transition "/>
                 </a>
 
+                <div className="flex flex-row gap-2 w-full justify-center">
+                    <a 
+                        className="linkedinHover bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
+                        href="https://www.linkedin.com/in/timothy-wiliusa/"
+                        target="_blank"
+                    >
+                        <BsLinkedin />
+                        {/* <AnimatedLinkedIn /> */}
+
+                    </a>
+                    <a 
+                        className="gitHover bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
+                        href="https://github.com/timothywiliusa"
+                        target="_blank"
+                    >
+                        <FaGithubSquare />
+                        {/* <AnimatedFork /> */}
+
+                    </a> 
+                </div>
+            </div>
+
+            <div className="
+            flex gap-2 justify-center
+            flex-row w-fit
+            ">
+                
+                <div className="flex flex-row gap-2 w-full justify-center">
+                    <a 
+                        className="emailHover bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
+                        href="mailto:work@timothywiliusa.com"
+                    >
+                        {/* <TfiEmail /> */}
+                        <AnimatedEmail />
+                    </a>
+                    <a 
+                        className="callHover bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
+                        href="tel:+1-541-248-4595"
+                    >
+                        {/* <BiSolidPhoneCall /> */}
+                        <AnimatedCall />
+                    </a>
+                </div>
+                
                 <Link
                 href='#contact'
                 className="min-w-[170px] group bg-gray-900 text-white pl-9 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-zinc-950 dark:text-red-600  dark:border-4 dark:border-zinc-950 text-sm"
@@ -151,48 +217,6 @@ export default function Intro() {
                     Contact me 
                     <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition "/>
                 </Link>
-
-           
-            
-               
-          
-            </div>
-
-            <div className="
-            flex flex-col gap-2 w-full justify-center
-            sm:flex-row sm:w-fit
-            ">
-                <div className="flex flex-row gap-2 w-full justify-center">
-                    <a 
-                        className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
-                        href="mailto:work@timothywiliusa.com"
-                    >
-                        <TfiEmail />
-                    </a>
-                    <a 
-                        className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
-                        href="tel:+1-541-248-4595"
-                    >
-                        <BiSolidPhoneCall />
-                    </a>
-                </div>
-                <div className="flex flex-row gap-2 w-full justify-center">
-                    <a 
-                        className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
-                        href="https://www.linkedin.com/in/timothy-wiliusa/"
-                        target="_blank"
-                    >
-                        <BsLinkedin />
-                    </a>
-                    <a 
-                        className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600" 
-                        href="https://github.com/timothywiliusa"
-                        target="_blank"
-                    >
-                        <FaGithubSquare />
-                    </a> 
-                </div>
-
                
                 
             </div>
