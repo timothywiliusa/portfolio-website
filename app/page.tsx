@@ -1,21 +1,22 @@
-import Intro from '@/components/intro'
-import SectionDivider from '@/components/section-divider'
-import About from '@/components/about'
-import Projects from '@/components/projects'
-import Skills from '@/components/skills'
-import Experience from '@/components/experience'
-import Contact from '@/components/contact'
-
+import Intro from "@/components/intro";
+import SectionDivider from "@/components/section-divider";
+import About from "@/components/about";
+import Projects from "@/components/projects";
+import Skills from "@/components/skills";
+import Experience from "@/components/experience";
+import Contact from "@/components/contact";
+import AppleWatchHomeScreen from "@/components/apple-watch";
 export default function Home() {
   return (
-    <main className='flex flex-col items-center px-6 sm:px-[100px]  ' >
+    <main className="flex flex-col items-center px-6 sm:px-[100px]  ">
       <Intro />
       <SectionDivider />
       <Projects />
+      {/* <AppleWatchHomeScreen /> */}
       <Experience />
       <About />
       <Skills />
-      <Contact/>
+      <Contact />
     </main>
-  )
+  );
 }

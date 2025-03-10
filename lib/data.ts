@@ -1,22 +1,51 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact , FaLaptop, FaStackOverflow, FaDocker, FaGithub, FaGitSquare} from "react-icons/fa";
-import { MdOutlineBusinessCenter} from "react-icons/md";
+import {
+  FaReact,
+  FaLaptop,
+  FaStackOverflow,
+  FaDocker,
+  FaGithub,
+  FaGitSquare,
+} from "react-icons/fa";
+import { MdOutlineBusinessCenter } from "react-icons/md";
 import { LuGraduationCap } from "react-icons/lu";
 import { BsHddNetwork } from "react-icons/bs";
 import { LiaFigma } from "react-icons/lia";
-import { BiLogoTypescript, BiLogoRedux, BiLogoPostgresql, BiChip } from "react-icons/bi";
+import {
+  BiLogoTypescript,
+  BiLogoRedux,
+  BiLogoPostgresql,
+  BiChip,
+} from "react-icons/bi";
 import { GiRotaryPhone } from "react-icons/gi";
 import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
-import { SiTailwindcss, SiMongodb, SiExpress, SiGraphql, SiFirebase, SiApollographql, SiPowerbi, SiPowershell, SiWarp} from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiMongodb,
+  SiExpress,
+  SiGraphql,
+  SiFirebase,
+  SiApollographql,
+  SiPowerbi,
+  SiPowershell,
+  SiWarp,
+} from "react-icons/si";
 import { RxFramerLogo } from "react-icons/rx";
 import { VscVscode } from "react-icons/vsc";
 
-import dbrepl from "@/public/dockermongo.png"
-import linearhashing from "@/public/linearhashing.png";
-import quantumvox from "@/public/quantum-vox.png";
-import calvin from "@/public/project-calvin.png";''
+// import dbrepl from "@/public/dockermongo.png"
+// import linearhashing from "@/public/linearhashing.png";
+// import quantumvox from "@/public/quantum-vox.png";
+// import calvin from "@/public/project-calvin.png";''
 
+export const profileImages = [
+  "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIU019bDxyuPjTikwFVz7msMQptAfdqrJX6n9c",
+  "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIfhI9XYtiDg3Ik4YvBCNF0ZxQl5KtmoWwH1ne",
+  "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkI1qoxy0bwXH3vReyQcMPhxOUItVfl6iBFnCEN",
+  "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIKgQPrm4ODLkxgP0yuIARi7h2oGNJa3Hlvpw9",
+  "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIR0jkOJpTmsI0p3Lgq7MHxC1tEPWN5VAvfoDe",
+] as string[];
 
 export const links = [
   {
@@ -28,7 +57,7 @@ export const links = [
     name: "Projects",
     hash: "#projects",
   },
- 
+
   {
     name: "Experience",
     hash: "#experience",
@@ -114,164 +143,161 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
-
   {
     title: "Full Stack Development",
     description:
       "I design and host websites based on each client's wants and needs. With features such as a customer relationship management (CRM) and content management system (CMS).",
-    tags: [  "Framer", "3D animations","Paralax Scrolling","Cal.com"],
-    imageUrl: quantumvox,
-    href: "https://quantum-vox.com"
+    tags: ["Framer", "3D animations", "Paralax Scrolling", "Cal.com"],
+    imageUrl:
+      "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkI7wAZZqfxwUC6dhQRkjvOBK1TlDGoZnMzF49N",
+    href: "https://quantum-vox.com",
   },
   {
     title: "Cloud API",
     description:
-      "\"Yelpy\" is a fully automated and encrypted cloud development application that initiates a yelp-like API and database from your local machine. Tested with Postman API.",
+      '"Yelpy" is a fully automated and encrypted cloud development application that initiates a yelp-like API and database from your local machine. Tested with Postman API.',
     tags: ["Node.js", "MongoDB", "Docker", "Redis", "bcrypt.js"],
-    imageUrl: dbrepl,
-    href: "https://github.com/timothywiliusa/mongodb-replication"
+    imageUrl:
+      "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIikbFmpcNQa0B7qMTYXvn2exs8zgEPDZu1OJC",
+    href: "https://github.com/timothywiliusa/mongodb-replication",
   },
   {
     title: "Linear Hashing",
     description:
-       "\"Hashy\" is a C++ program that I created for my Database Management class. It uses linear hashing to create memory buckets and order them to minimize the load time of data searching.",
-    tags: ["C", "C++", "memory management","encrypt/decrypt", "binary I/O"],
-    imageUrl: linearhashing,
-    href: "https://github.com/timothywiliusa/DBMS-external-sorting"
+      '"Hashy" is a C++ program that I created for my Database Management class. It uses linear hashing to create memory buckets and order them to minimize the load time of data searching.',
+    tags: ["C", "C++", "memory management", "encrypt/decrypt", "binary I/O"],
+    imageUrl:
+      "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkILlyzF3Aa1JZzV3WhQDsiugkAI0TGYjd8BrbK",
+    href: "https://github.com/timothywiliusa/DBMS-external-sorting",
   },
   {
     title: "Microservice Architechture",
     description:
       "I designed and built a web-application for a church. This project implements Next Auth Beta using PostgreSql and Prisma, and audio files are stored using Firebase storage.",
-    tags: [  "Next.Js", "Next/Auth","Firebase","Lazy Loading"],
-    imageUrl: calvin,
-    href: "https://calvin-presbyterian.vercel.app/"
+    tags: ["Next.Js", "Next/Auth", "Firebase", "Lazy Loading"],
+    imageUrl:
+      "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkICpOVTGUJ6FVtWN4qQ9xUBG2AZmKnj7YX35kT",
+    href: "https://calvin-presbyterian.vercel.app/",
   },
-
- 
 ] as const;
-
-
-
-
 
 export const stackData = [
   {
     title: "Next.js",
     icon: React.createElement(TbBrandNextjs),
-    href: "https://nextjs.org"
+    href: "https://nextjs.org",
   },
   {
     title: "TypeScript",
     icon: React.createElement(BiLogoTypescript),
-    href: "https://www.typescriptlang.org"
+    href: "https://www.typescriptlang.org",
   },
   {
     title: "React",
     icon: React.createElement(FaReact),
-    href: "https://react.dev"
+    href: "https://react.dev",
   },
   {
     title: "Vercel",
     icon: React.createElement(TbBrandVercel),
-    href: "https://vercel.com/"
+    href: "https://vercel.com/",
   },
   {
     title: "MongoDB",
     icon: React.createElement(SiMongodb),
-    href: "https://www.mongodb.com"
+    href: "https://www.mongodb.com",
   },
   {
     title: "Docker",
     icon: React.createElement(FaDocker),
-    href: "https://www.docker.com"
-  }
+    href: "https://www.docker.com",
+  },
 ] as const;
 
 export const techData = [
   {
     title: "Git",
     icon: React.createElement(FaGitSquare),
-    href: "https://git-scm.com"
+    href: "https://git-scm.com",
   },
   {
     title: "Github",
     icon: React.createElement(FaGithub),
-    href: "https://github.com/timothywiliusa"
+    href: "https://github.com/timothywiliusa",
   },
   {
     title: "Tailwind",
     icon: React.createElement(SiTailwindcss),
-    href: "https://tailwindcss.com"
+    href: "https://tailwindcss.com",
   },
   {
     title: "Figma",
     icon: React.createElement(LiaFigma),
-    href: "https://www.figma.com/"
+    href: "https://www.figma.com/",
   },
   {
     title: "Framer",
     icon: React.createElement(RxFramerLogo),
-    href: "https://framer.com/"
+    href: "https://framer.com/",
   },
   {
     title: "Redux",
     icon: React.createElement(BiLogoRedux),
-    href: "https://redux.js.org"
+    href: "https://redux.js.org",
   },
   {
     title: "Express",
     icon: React.createElement(SiExpress),
-    href: "https://expressjs.com"
+    href: "https://expressjs.com",
   },
   {
     title: "PostgreSQL",
     icon: React.createElement(BiLogoPostgresql),
-    href: "https://www.postgresql.org"
+    href: "https://www.postgresql.org",
   },
   {
     title: "Firebase",
     icon: React.createElement(SiFirebase),
-    href: "https://firebase.google.com"
+    href: "https://firebase.google.com",
   },
   {
     title: "GraphQL",
     icon: React.createElement(SiGraphql),
-    href: "https://graphql.org"
+    href: "https://graphql.org",
   },
   {
     title: "Apollo",
     icon: React.createElement(SiApollographql),
-    href: "https://www.apollographql.com/why-graphql"
+    href: "https://www.apollographql.com/why-graphql",
   },
   {
     title: "PowerBI",
     icon: React.createElement(SiPowerbi),
-    href: "https://www.microsoft.com/en-us/power-platform/products/power-bi"
+    href: "https://www.microsoft.com/en-us/power-platform/products/power-bi",
   },
   {
     title: "Avaya",
     icon: React.createElement(GiRotaryPhone),
-    href: "https://www.avaya.com/en/"
+    href: "https://www.avaya.com/en/",
   },
   {
     title: "MIFARE",
     icon: React.createElement(BiChip),
-    href: "https://www.mifare.net"
+    href: "https://www.mifare.net",
   },
   {
     title: "VS Code",
     icon: React.createElement(VscVscode),
-    href: "https://code.visualstudio.com"
+    href: "https://code.visualstudio.com",
   },
   {
     title: "SSH",
     icon: React.createElement(SiPowershell),
-    href: "https://www.openssh.com"
+    href: "https://www.openssh.com",
   },
   {
     title: "Warp",
     icon: React.createElement(SiWarp),
-    href: "https://www.warp.dev"
+    href: "https://www.warp.dev",
   },
 ] as const;

@@ -70,7 +70,7 @@ export const sendEmail = async (form: FormData) => {
         text: `This is an automated confirmation receipt. Your message: ${message}`,
         html: `<div>
                     <p><label>Your message: </label>${message}</p>
-                    <p><label>This is an automated confirmation receipt from timothywiliusa.com</label></p>
+                    <p><label>This is an automated confirmation from timothywiliusa.com</label></p>
                     </div>`,
       },
     });
