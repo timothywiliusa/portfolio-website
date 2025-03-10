@@ -93,7 +93,7 @@ export default function Intro() {
                     height="192"
                     quality="95"
                     priority={true}
-                    className={` absolute top-0 left-0 bg-transparent h-[100px] min-w-[100px] rounded-full object-cover border-[0.35rem] border-black shadow-xl dark:border-[#cc4629] ${
+                    className={` absolute top-0 left-0 bg-transparent h-[100px] min-w-[100px] rounded-full object-cover border-[0.35rem] border-black shadow-xl dark:border-[#ff0040] ${
                       index === currentImageIndex ? "opacity-100" : "opacity-0"
                     }`}
                   />
@@ -118,7 +118,7 @@ export default function Intro() {
           </motion.span> */}
         </div>
 
-        <div className="sm:pl-2 fira-code-regular text-sm text-[#ff5555] mb-4">
+        <div className="pl-2 fira-code-regular text-sm text-[#ff0040] mb-4">
           Hi, my name is
         </div>
       </div>
@@ -183,8 +183,8 @@ export default function Intro() {
       >
         <div className="flex gap-2 flex-row justify-start items-start">
           <a
-            className="borderBlack min-w-[170px] group bg-white h-12 w-36 justify-center text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm"
-            href="/timothy-wiliusa.pdf"
+            className="borderBlack min-w-[170px] group bg-white h-12 w-36 justify-center text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm dark:hover:text-white dark:hover:bg-[ff0040d0]"
+            href="https://9upxg1g8p4.ufs.sh/f/9pigm30TxnkIXiShHPjj9XkGJcDOFQ186dahuNfWKwebtSAi"
             target="_blank"
           >
             Resume.pdf
