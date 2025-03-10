@@ -183,24 +183,24 @@ export default function Intro() {
       >
         <div className="flex gap-2 flex-row justify-start items-start">
           <a
-            className="borderBlack min-w-[170px] group bg-white h-12 w-36 justify-center text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm dark:hover:text-white dark:hover:bg-[ff0040d0]"
+            className="borderBlack min-w-[170px] group bg-white h-12 w-36 justify-center text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm dark:hover:text-white dark:hover:bg-[#ff0040] dark:hover:border-[#ff0040]"
             href="https://9upxg1g8p4.ufs.sh/f/9pigm30TxnkIXiShHPjj9XkGJcDOFQ186dahuNfWKwebtSAi"
             target="_blank"
           >
             Resume.pdf
-            <HiDownload className="opacity-70 group-hover:translate-y-1 transition " />
+            <HiDownload className="opacity-70 group-hover:translate-y-1 transition hover:opacity-100" />
           </a>
 
           <div className="flex flex-row gap-2 w-full justify-center">
             <a
-              className="linkedinHover bg-white w-12 h-12 justify-center text-gray-700 flex items-center rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600"
+              className="linkedinHover bg-white w-12 h-12 justify-center text-gray-700 flex items-center rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600 dark:hover:text-white"
               href="https://www.linkedin.com/in/timothy-wiliusa/"
               target="_blank"
             >
               <BsLinkedin />
             </a>
             <a
-              className="gitHover bg-white text-gray-700 w-12 h-12 justify-center flex items-center text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600"
+              className="gitHover bg-white text-gray-700 w-12 h-12 justify-center flex items-center text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600 dark:hover:text-white"
               href="https://github.com/timothywiliusa"
               target="_blank"
             >
@@ -232,14 +232,14 @@ export default function Intro() {
 
           <Link
             href="#contact"
-            className="min-w-[170px] group bg-gray-900 text-white justify-center h-12 w-36 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-zinc-950 dark:text-red-600  dark:border-4 dark:border-zinc-950 text-sm"
+            className="min-w-[170px] group bg-gray-900 text-white justify-center h-12 w-36 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-zinc-950 dark:text-red-600  dark:border-4 dark:border-zinc-950 text-sm dark:hover:text-white"
             onClick={() => {
               setActiveSection("Contact");
               setTimeOfLastClick(Date.now());
             }}
           >
             Contact me
-            <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition " />
+            <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition  " />
           </Link>
         </div>
       </motion.div>
