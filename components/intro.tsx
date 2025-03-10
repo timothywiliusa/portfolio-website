@@ -7,8 +7,8 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import { BiSolidPhoneCall } from "react-icons/bi";
-import { TfiEmail } from "react-icons/tfi";
+// import { BiSolidPhoneCall } from "react-icons/bi";
+// import { TfiEmail } from "react-icons/tfi";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { profileImages } from "@/lib/data";
@@ -39,9 +39,9 @@ const AnimatedCall = dynamic(() => import("./lordicon/animated-icon-call"), {
 export default function Intro() {
   const { ref } = useSectionInView("Resume", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-  const [currentImage, setCurrentImage] = useState(
-    "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIU019bDxyuPjTikwFVz7msMQptAfdqrJX6n9c"
-  );
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   // console.log("printing key")
   // console.log(process.env.NEXT_PUBLIC_API_KEY)
 
@@ -67,13 +67,12 @@ export default function Intro() {
             whileHover={{ scale: 1.05 }}
             className="cursor-pointer relative"
             onClick={() => {
-              const currentIndex = profileImages.indexOf(currentImage);
-              const nextIndex = (currentIndex + 1) % profileImages.length;
-              setCurrentImage(profileImages[nextIndex]);
+              setCurrentImageIndex((prev) => (prev + 1) % profileImages.length);
+              console.log(currentImageIndex);
             }}
           >
             <motion.div
-              className="absolute inset-0 bg-white/20 dark:bg-black/20 rounded-full"
+              className="block min-h-[100px] min-w-[100px] inset-0 bg-white/20 dark:bg-black/20 rounded-full"
               animate={{
                 scale: [1, 1.05, 1],
                 opacity: [0, 0.5, 0],
@@ -84,15 +83,23 @@ export default function Intro() {
                 ease: "easeInOut",
               }}
             />
-            <Image
-              src={currentImage}
-              alt="Tim"
-              width="192"
-              height="192"
-              quality="95"
-              priority={true}
-              className="bg-transparent h-[100px] w-[100px] rounded-full object-cover border-[0.35rem] border-black shadow-xl dark:border-[#cc4629] transition-all duration-500"
-            />
+            {profileImages.map((image, index) => {
+              return (
+                <div key={index}>
+                  <Image
+                    src={image}
+                    alt="Tim"
+                    width="192"
+                    height="192"
+                    quality="95"
+                    priority={true}
+                    className={` absolute top-0 left-0 bg-transparent h-[100px] min-w-[100px] rounded-full object-cover border-[0.35rem] border-black shadow-xl dark:border-[#cc4629] ${
+                      index === currentImageIndex ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                </div>
+              );
+            })}
           </motion.div>
 
           {/* <motion.span
