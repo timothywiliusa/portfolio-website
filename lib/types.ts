@@ -3,13 +3,13 @@ import { links } from "./data";
 export type SectionName = (typeof links)[number]["name"];
 
 type LordIconTrigger =
-  | 'in'
-  | 'hover'
-  | 'loop'
-  | 'loop-on-hover'
-  | 'click'
-  | 'morph'
-  | 'Boomerang';
+  | "in"
+  | "hover"
+  | "loop"
+  | "loop-on-hover"
+  | "click"
+  | "morph"
+  | "Boomerang";
 
 type LordIconProps = {
   src?: string;
@@ -17,6 +17,7 @@ type LordIconProps = {
   colors?: string;
   delay?: string | number;
   target?: string;
+  stroke?: string;
 };
 
 type LordIconElement = React.DetailedHTMLProps<
@@ -28,7 +29,7 @@ type LordIconElement = React.DetailedHTMLProps<
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      'lord-icon': LordIconElement;
+      "lord-icon": LordIconElement;
     }
   }
 }
