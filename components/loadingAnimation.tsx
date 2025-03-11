@@ -68,7 +68,7 @@ function LoadingLineReveal() {
  * ==============   Utils   ================
  */
 function useMockLoading() {
-  const progress = useSpring(0, { stiffness: 500, damping: 40 });
+  const progress = useSpring(0, { stiffness: 50, damping: 20 });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -80,7 +80,7 @@ function useMockLoading() {
       } else {
         progress.set(newProgress);
       }
-    }, 300);
+    }, 100);
 
     return () => clearInterval(interval);
   }, [progress]);

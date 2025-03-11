@@ -18,6 +18,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { useEffect, useState } from "react";
+import LightDarkButton from "@/components/light-dark-button";
 
 export default function Home() {
   const progress = useMockLoading();
@@ -62,6 +63,7 @@ export default function Home() {
         <About />
         <Skills />
         <Contact />
+        <LightDarkButton />
       </main>
 
       <motion.div
@@ -77,7 +79,7 @@ export default function Home() {
 }
 
 function useMockLoading() {
-  const progress = useSpring(0, { stiffness: 500, damping: 40 });
+  const progress = useSpring(0, { stiffness: 2000, damping: 100 });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -89,7 +91,7 @@ function useMockLoading() {
       } else {
         progress.set(newProgress);
       }
-    }, 300);
+    }, 20);
 
     return () => clearInterval(interval);
   }, [progress]);

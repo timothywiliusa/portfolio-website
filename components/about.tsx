@@ -85,7 +85,7 @@ export default function About() {
         </div>
 
         <Image
-          src="/https://9upxg1g8p4.ufs.sh/f/9pigm30TxnkIqnV3F5IIk0gxwCfvrlJiYNSp6quLdDeaF51K"
+          src="https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIqnV3F5IIk0gxwCfvrlJiYNSp6quLdDeaF51K"
           alt="Tim"
           width="1000"
           height="1000"
@@ -96,7 +96,7 @@ export default function About() {
 
         <div className="grid items-center justify-center">
           <Image
-            src="/author2.jpg"
+            src="https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIxyyQWh5tjZ1hk6EKMJYlriD7wN8ebx2Aqgno"
             alt="Tim"
             width="500"
             height="500"

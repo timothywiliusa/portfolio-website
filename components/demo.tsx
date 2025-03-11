@@ -21,7 +21,7 @@ const AnimatedCall = dynamic(() => import("./lordicon/animated-icon-call"), {
   ssr: false,
 });
 
-export default function Intro() {
+export default function Demo() {
   const { ref } = useSectionInView("Resume", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
@@ -72,7 +72,7 @@ export default function Intro() {
                     setAnimationCount((prev) => prev + 1);
                   }
                 }, (40 + Math.sin((flickerCount / totalFlickers) * Math.PI) * 20) / 3);
-              }, 500); // wait for half a second
+              }, 2000); // 2 seconds between each cycle
             } else {
               setIsAlternateBorder((prev) => !prev);
               flickerCount++;
@@ -82,7 +82,7 @@ export default function Intro() {
             setAnimationCount((prev) => prev + 1);
           }
         }, (40 + Math.sin((flickerCount / totalFlickers) * Math.PI) * 20) / 3);
-      }, 3000); // wait for 3 seconds
+      }, 3000); // 3 seconds between each cycle
     };
 
     // this animation only runs one time
@@ -148,8 +148,8 @@ export default function Intro() {
                       border-[0.35rem] 
                       ${
                         isAlternateBorder
-                          ? "border-red-500 dark:border-[#ff0040]"
-                          : "border-black dark:border-red-800"
+                          ? "border-black dark:border-[#ff0040]"
+                          : "border-red-800"
                       }
                       shadow-xl
                       transition-none
@@ -212,83 +212,8 @@ export default function Intro() {
           >
             Quantum Vox
           </Link>
-          .
         </div>
       </motion.h2>
-
-      <motion.div
-        className="
-        flex flex-col gap-2 
-        items-center xs:items-start 
-        text-lg font-medium"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <div className="flex gap-2 flex-row justify-start items-start">
-          <a
-            className="borderBlack min-w-[170px] group bg-white h-12 w-36 justify-center text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-600 dark:border-4 dark:bg-red-600 dark:text-gray-300 text-sm dark:hover:text-white dark:hover:bg-[#ff0040] dark:hover:border-[#ff0040]"
-            href="https://9upxg1g8p4.ufs.sh/f/9pigm30TxnkIXiShHPjj9XkGJcDOFQ186dahuNfWKwebtSAi"
-            target="_blank"
-          >
-            Resume.pdf
-            <HiDownload className=" group-hover:translate-y-1 transition text-white" />
-          </a>
-
-          <div className="flex flex-row gap-2 w-full justify-center">
-            <a
-              className="linkedinHover bg-white w-12 h-12 justify-center text-gray-700 flex items-center rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600 dark:hover:text-white"
-              href="https://www.linkedin.com/in/timothy-wiliusa/"
-              target="_blank"
-            >
-              <BsLinkedin />
-            </a>
-            <a
-              className="gitHover bg-white text-gray-700 w-12 h-12 justify-center flex items-center text-[1.25rem] rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600 dark:hover:text-white"
-              href="https://github.com/timothywiliusa"
-              target="_blank"
-            >
-              <FaGithubSquare />
-            </a>
-          </div>
-        </div>
-
-        <div
-          className="
-            flex gap-2 justify-center
-            flex-row w-fit
-            "
-        >
-          <div className="flex flex-row gap-2 w-full justify-center">
-            <a
-              className="emailHover bg-white w-12 h-12 justify-center text-gray-700 flex items-center rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600"
-              href="mailto:work@timothywiliusa.com"
-            >
-              <AnimatedEmail />
-            </a>
-            <a
-              className="callHover bg-white w-12 h-12 justify-center text-gray-700 flex items-center rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-950 dark:text-red-600"
-              href="tel:+1-541-248-4595"
-            >
-              <AnimatedCall />
-            </a>
-          </div>
-
-          <Link
-            href="#contact"
-            className="min-w-[170px] group bg-gray-900 text-white justify-center h-12 w-36 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition dark:bg-zinc-950 dark:text-red-600  dark:border-4 dark:border-zinc-950 text-sm dark:hover:text-white"
-            onClick={() => {
-              setActiveSection("Contact");
-              setTimeOfLastClick(Date.now());
-            }}
-          >
-            Contact me
-            <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition  " />
-          </Link>
-        </div>
-      </motion.div>
     </section>
   );
 }

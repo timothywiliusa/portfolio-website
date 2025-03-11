@@ -20,13 +20,29 @@ const AnimatedBat = dynamic(() => import("./lordicon/animated-icon-bat"), {
   ssr: false,
 });
 
-export default function LightDarkButton() {
+export default function LightDarkButtonTesting() {
   const { theme, toggleTheme } = useTheme();
   const [isAnimating, setIsAnimating] = useState(false);
-  const [isDisabled, setIsDisabled] = useState(false);
 
+  // const leftEdge = useMotionValue("calc(50% - 2px)");
+  // const rightEdge = useMotionValue("calc(50% + 2px)");
   const leftEdge = useMotionValue("0%");
   const rightEdge = useMotionValue("100%");
+
+  // const clipPath = useMotionTemplate`polygon(
+  //   0% 0%,
+  //   ${leftEdge} 0%,
+  //   ${leftEdge} ${topEdge},
+  //   ${leftEdge} ${bottomEdge},
+  //   ${rightEdge} ${bottomEdge},
+  //   ${rightEdge} ${topEdge},
+  //   ${leftEdge} ${topEdge},
+  //   ${leftEdge} 0%,
+  //   100% 0%,
+  //    100% 100%,
+  //    0% 100%,
+  //    0% 0%
+  // )`;
 
   const clipPath = useMotionTemplate`polygon(
     0% 0%,
@@ -41,11 +57,6 @@ export default function LightDarkButton() {
   )`;
 
   const handleClick = async () => {
-    if (isDisabled) return;
-
-    setIsDisabled(true);
-    setTimeout(() => setIsDisabled(false), 1000);
-
     const transition: Transition = {
       type: "spring",
       visualDuration: 0.5,
@@ -68,9 +79,8 @@ export default function LightDarkButton() {
       <button
         className="fixed bottom-5 right-5 text-white bg-slate-800 w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:text-yellow-200 dark:bg-red-800 dark:hover:bg-[#ff0040] dark:bg-opacity-75 dark:hover:text-yellow-100"
         onClick={handleClick}
-        disabled={isDisabled}
       >
-        {theme === "light" ? <AnimatedBat /> : <AnimatedLamp />}
+        no.2{/* {theme === "light" ? <AnimatedBat /> : <AnimatedLamp />} */}
       </button>
 
       {isAnimating && (
