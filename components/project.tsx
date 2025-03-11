@@ -54,11 +54,11 @@ export default function Project({
         
        "
           >
-            <h3 className="text-xl fira-code-regular text-[#ff5555] inline">
+            <h3 className="text-xl fira-code-regular text-[#ff0040] inline">
               {title}
             </h3>
 
-            <p className="text-sm mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+            <p className="text-sm mt-2 leading-relaxed text-gray-700 dark:text-white/70 group-hover:text-white">
               {description}
             </p>
             <ul
@@ -70,7 +70,7 @@ export default function Project({
               {tags.map((tag, index) => (
                 <li
                   key={index}
-                  className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                  className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70 group-hover:text-white"
                 >
                   {tag}
                 </li>

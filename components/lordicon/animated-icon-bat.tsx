@@ -3,31 +3,29 @@ import { LordIcon } from "@/lib/lord-icon";
 import { useTheme } from "@/context/theme-context";
 import React from "react";
 
-export default function AnimatedEmail() {
+export default function AnimatedFork() {
   const { theme, toggleTheme } = useTheme();
 
   if (theme === "light") {
     return (
       <LordIcon
-        src="https://cdn.lordicon.com/hqcpolbo.json"
+        src="https://cdn.lordicon.com/nukjbglx.json"
         trigger="hover"
         delay={2000}
-        colors={{ primary: "#455a64", secondary: "#455a64" }}
-        size={25}
+        colors={{ primary: "#ff0040", secondary: "#ff0040" }}
+        size={35}
         stroke="bold"
-        target=".emailHover"
       />
     );
   } else {
     return (
       <LordIcon
-        src="https://cdn.lordicon.com/hqcpolbo.json"
+        src="https://cdn.lordicon.com/nukjbglx.json"
         trigger="hover"
         delay={2000}
-        colors={{ primary: "#e53935", secondary: "#ffffff" }}
-        size={25}
+        colors={{ primary: "#ffffff", secondary: "#ffffff" }}
+        size={35}
         stroke="bold"
-        target=".emailHover"
       />
     );
   }

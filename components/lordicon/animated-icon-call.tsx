@@ -15,6 +15,7 @@ export default function AnimatedCall() {
         colors={{ primary: "#455a64", secondary: "#455a64" }}
         size={25}
         target=".callHover"
+        stroke="bold"
       />
     );
   } else {
@@ -26,6 +27,7 @@ export default function AnimatedCall() {
         colors={{ primary: "#e53935", secondary: "#ffffff" }}
         size={25}
         target=".callHover"
+        stroke="bold"
       />
     );
   }

@@ -74,7 +74,6 @@ export default function About() {
             design to create a beautiful product. My goal is to always build
             applications that are scalable and efficient under the hood while
             providing engaging, pixel-perfect user experiences.
-            {/* In my free time, I've also released an online video course that covers everything you need to know to build a web app with the Spotify API. */}
           </p>
           <p className="">
             At the end of the day, my primary goal is to create something
@@ -86,7 +85,7 @@ export default function About() {
         </div>
 
         <Image
-          src="https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIqnV3F5IIk0gxwCfvrlJiYNSp6quLdDeaF51K"
+          src="/https://9upxg1g8p4.ufs.sh/f/9pigm30TxnkIqnV3F5IIk0gxwCfvrlJiYNSp6quLdDeaF51K"
           alt="Tim"
           width="1000"
           height="1000"
@@ -97,7 +96,7 @@ export default function About() {
 
         <div className="grid items-center justify-center">
           <Image
-            src="https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIxyyQWh5tjZ1hk6EKMJYlriD7wN8ebx2Aqgno"
+            src="/author2.jpg"
             alt="Tim"
             width="500"
             height="500"

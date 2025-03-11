@@ -1,32 +1,30 @@
-"use client"
+"use client";
 
 // import React from 'react';
 
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
 // const Lottie = dynamic<{}>(
-//   () => import("lottie-web"), { 
-//     ssr: false 
+//   () => import("lottie-web"), {
+//     ssr: false
 //   }
 // );
 
-
-import lottie from 'lottie-web';
+import lottie from "lottie-web";
 // import {defineElement} from 'lord-icon-element';
-import {defineElement} from '@lordicon/element';
-
+import { defineElement } from "@lordicon/element";
 
 // register lottie and define custom element
 defineElement(lottie.loadAnimation);
 
 export type LordIconTrigger =
-  | 'in'
-  | 'hover'
-  | 'loop'
-  | 'loop-on-hover'
-  | 'click'
-  | 'morph'
-  | 'Boomerang';
+  | "in"
+  | "hover"
+  | "loop"
+  | "loop-on-hover"
+  | "click"
+  | "morph"
+  | "Boomerang";
 
 export type LordIconColors = {
   primary?: string;
@@ -40,6 +38,7 @@ export type LordIconProps = {
   delay?: number;
   size?: number;
   target?: string;
+  stroke?: string;
 };
 
 export const LordIcon = ({
@@ -49,6 +48,7 @@ export const LordIcon = ({
   trigger,
   delay,
   target,
+  stroke,
 }: LordIconProps) => {
   return (
     <lord-icon
@@ -61,6 +61,7 @@ export const LordIcon = ({
         height: size,
       }}
       target={target}
+      stroke={stroke}
     />
   );
 };

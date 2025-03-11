@@ -1,14 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-// import { BiSolidPhoneCall } from "react-icons/bi";
-// import { TfiEmail } from "react-icons/tfi";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { profileImages } from "@/lib/data";
@@ -23,27 +21,42 @@ const AnimatedCall = dynamic(() => import("./lordicon/animated-icon-call"), {
   ssr: false,
 });
 
-// const AnimatedLinkedIn = dynamic(
-//   () => import("./lordicon/animated-icon-linkedin"),
-//   {
-//     loading: () => <p>Loading...</p>,
-//     ssr: false,
-//   }
-// );
-
-// const AnimatedFork = dynamic(() => import("./lordicon/animated-icon-fork"), {
-//   loading: () => <p>Loading...</p>,
-//   ssr: false,
-// });
-
 export default function Intro() {
   const { ref } = useSectionInView("Resume", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isAlternateBorder, setIsAlternateBorder] = useState(false);
+  const [animationCount, setAnimationCount] = useState(0);
 
-  // console.log("printing key")
-  // console.log(process.env.NEXT_PUBLIC_API_KEY)
+  useEffect(() => {
+    if (animationCount >= 1) return; // Stop after 3 animations
+
+    const flickerSequence = () => {
+      // Initial state change
+      setIsAlternateBorder((prev) => !prev);
+
+      // Flicker effect over 1 second
+      let flickerCount = 0;
+      const flickerInterval = setInterval(() => {
+        if (flickerCount < 6) {
+          // 5 flickers over 1 second
+          setIsAlternateBorder((prev) => !prev);
+          flickerCount++;
+        } else {
+          clearInterval(flickerInterval);
+          setAnimationCount((prev) => prev + 1); // Increment animation count
+        }
+      }, 40); // 200ms between each flicker
+    };
+
+    // Main interval for the 3-second cycle
+    const interval = setInterval(flickerSequence, 4200);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [animationCount]); // Add animationCount as dependency
 
   return (
     <section
@@ -58,9 +71,6 @@ export default function Intro() {
         
         dark:text-zinc-400 "
     >
-      {/* <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-orange-900"></div>
-
-        <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-red-900"></div> */}
       <div className="flex items-end bg-none w-full">
         <div className="inline relative bg-none">
           <motion.div
@@ -93,29 +103,29 @@ export default function Intro() {
                     height="192"
                     quality="95"
                     priority={true}
-                    className={` absolute top-0 left-0 bg-transparent h-[100px] min-w-[100px] rounded-full object-cover border-[0.35rem] border-black shadow-xl dark:border-[#ff0040] ${
-                      index === currentImageIndex ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`
+                      absolute top-0 left-0 
+                      bg-transparent h-[100px] min-w-[100px] 
+                      rounded-full object-cover 
+                      border-[0.35rem] 
+                      ${
+                        isAlternateBorder
+                          ? "border-black dark:border-[#ff0040]"
+                          : "border-red-800"
+                      }
+                      shadow-xl
+                      transition-none
+                      ${
+                        index === currentImageIndex
+                          ? "opacity-100"
+                          : "opacity-0"
+                      }
+                    `}
                   />
                 </div>
               );
             })}
           </motion.div>
-
-          {/* <motion.span
-            className=" bg-transparent absolute bottom-[-15px] right-[-25px] text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-              // waving emoji animation
-            }}
-          >
-            👋
-          </motion.span> */}
         </div>
 
         <div className="pl-2 fira-code-regular text-sm text-[#ff0040] mb-4">
@@ -130,7 +140,6 @@ export default function Intro() {
         md:mb-10 "
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        // animate to appear from bellow
       >
         <span
           className="
@@ -152,7 +161,6 @@ export default function Intro() {
         md:mb-10"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        // animate to appear from bellow
       >
         <div className="max-w-[410px] md:max-w-[550px]">
           I specialize in building (and occasionally designing) full stack web
@@ -183,12 +191,12 @@ export default function Intro() {
       >
         <div className="flex gap-2 flex-row justify-start items-start">
           <a
-            className="borderBlack min-w-[170px] group bg-white h-12 w-36 justify-center text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-800 dark:border-4 dark:bg-red-800 dark:text-gray-300 text-sm dark:hover:text-white dark:hover:bg-[#ff0040] dark:hover:border-[#ff0040]"
+            className="borderBlack min-w-[170px] group bg-white h-12 w-36 justify-center text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-600 dark:border-4 dark:bg-red-600 dark:text-gray-300 text-sm dark:hover:text-white dark:hover:bg-[#ff0040] dark:hover:border-[#ff0040]"
             href="https://9upxg1g8p4.ufs.sh/f/9pigm30TxnkIXiShHPjj9XkGJcDOFQ186dahuNfWKwebtSAi"
             target="_blank"
           >
             Resume.pdf
-            <HiDownload className="opacity-70 group-hover:translate-y-1 transition hover:opacity-100" />
+            <HiDownload className=" group-hover:translate-y-1 transition text-white" />
           </a>
 
           <div className="flex flex-row gap-2 w-full justify-center">
