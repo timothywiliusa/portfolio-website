@@ -43,14 +43,13 @@ export default function LightDarkButton() {
   const handleClick = async () => {
     if (isDisabled) return;
 
-    setIsDisabled(true);
-    setTimeout(() => setIsDisabled(false), 1000);
-
     const transition: Transition = {
       type: "spring",
       visualDuration: 0.5,
       bounce: 0,
     };
+    setIsDisabled(true);
+    setTimeout(() => setIsDisabled(false), 1500);
 
     setIsAnimating(true); // unhides the screen
     animate(leftEdge, "51%", transition); //sets the left edge to center
