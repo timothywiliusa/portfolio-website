@@ -41,6 +41,7 @@ import { VscVscode } from "react-icons/vsc";
 
 export const profileImages = [
   "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIU019bDxyuPjTikwFVz7msMQptAfdqrJX6n9c",
+  "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIGgB4NzqtbdYiT6as3f24hy5gWwmvDVSBlQKR",
   "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIfhI9XYtiDg3Ik4YvBCNF0ZxQl5KtmoWwH1ne",
   "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkI1qoxy0bwXH3vReyQcMPhxOUItVfl6iBFnCEN",
   "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIKgQPrm4ODLkxgP0yuIARi7h2oGNJa3Hlvpw9",
