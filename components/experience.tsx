@@ -11,6 +11,7 @@ import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
 import { LuGraduationCap } from "react-icons/lu";
+import Link from "next/link";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience", 0.1);
@@ -18,7 +19,7 @@ export default function Experience() {
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>Timeline</SectionHeading>
+      <SectionHeading>Experience</SectionHeading>
       <VerticalTimeline lineColor={theme === "light" ? "#f3f4f6" : "#f9fafb"}>
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
@@ -38,7 +39,7 @@ export default function Experience() {
                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
-              dateClassName="text-white"
+              dateClassName={theme === "light" ? "text-black" : "text-white"}
               icon={item.icon}
               iconStyle={{
                 background: theme === "light" ? "white" : "#09090b",
@@ -46,15 +47,20 @@ export default function Experience() {
                 color: theme === "dark" ? "#ff0040" : "",
               }}
             >
-              <h3 className="fira-code-regular text-[#ff0040] text-lg ">
-                {item.title}
-              </h3>
-              <p className="font-normal text-xs !mt-0 pb-3">
-                {item.employer} in {item.location}
-              </p>
-              <p className="!mt-1 !font-normal pb-5 text-gray-700 dark:text-white/75">
-                {item.description}
-              </p>
+              <Link
+                href={item.href}
+                target={index === 0 ? undefined : "_blank"}
+              >
+                <h3 className="fira-code-regular text-[#ff0040] text-lg ">
+                  {item.title}
+                </h3>
+                <p className="font-normal text-xs !mt-0 pb-3">
+                  {item.employer} in {item.location}
+                </p>
+                <p className="!mt-1 !font-normal pb-5 text-gray-700 dark:text-white/75">
+                  {item.description}
+                </p>
+              </Link>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

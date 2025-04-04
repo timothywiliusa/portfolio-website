@@ -101,7 +101,7 @@ export default function Intro() {
       ref={ref}
       id="resume"
       className="
-        pt-36 xs:pt-40 sm:pt-46 lg:pt-52
+        pt-36 xs:pt-24 sm:pt-46 lg:pt-52
         w-full max-w-[1100px] 
         
         scroll-mt-[100rem] 
@@ -234,7 +234,7 @@ export default function Intro() {
             target="_blank"
           >
             Resume.pdf
-            <HiDownload className=" group-hover:translate-y-1 transition text-white" />
+            <HiDownload className=" group-hover:translate-y-1 transition dark:text-white" />
           </a>
 
           <div className="flex flex-row gap-2 w-full justify-center">

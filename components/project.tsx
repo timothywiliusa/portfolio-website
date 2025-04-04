@@ -58,7 +58,7 @@ export default function Project({
               {title}
             </h3>
 
-            <p className="text-sm mt-2 leading-relaxed text-gray-700 dark:text-white/70 group-hover:text-white">
+            <p className="text-sm mt-2 leading-relaxed text-gray-700 dark:text-white/70 dark:group-hover:text-white group-hover:text-black transition-all">
               {description}
             </p>
             <ul
@@ -70,7 +70,7 @@ export default function Project({
               {tags.map((tag, index) => (
                 <li
                   key={index}
-                  className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70 group-hover:text-white"
+                  className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70 hover:bg-[#ff0040] transition-all"
                 >
                   {tag}
                 </li>

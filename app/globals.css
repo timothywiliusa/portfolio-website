@@ -35,11 +35,11 @@ html {
 .borderBlack {
   @apply border border-black/10;
 }
+
 .inlineLink {
-  @apply text-[#ff0040] 
-  dark:sm:text-white 
+  @apply dark:sm:text-white 
   dark:hover:text-[#ff0040]
-  hover:text-[#ff0040] 
+  text-[#ff0040] 
   hover:underline;
 }
 

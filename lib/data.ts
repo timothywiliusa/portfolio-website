@@ -79,23 +79,16 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Looking for a full time job",
-    employer: "Located",
+    title: "Looking for a STEM-OPT/H1B job",
+    employer: "On-site / Remote",
     location: "USA",
     description:
-      "Full stack developer - Cloud API developer - Mobile application developer - React developer - Angular developer ",
+      "minimum 20h - prefer 40h - Full stack developer - Cloud API developer - Mobile application developer - React developer - Frontend developer",
     icon: React.createElement(MdOutlineBusinessCenter),
-    date: "Desired start date: March 10, 2025",
+    date: "Desired start date: August 4th, 2025",
+    href: "#contact",
   },
-  {
-    title: "Bachelor of Computer Science",
-    employer: "Oregon State University",
-    location: "Corvallis, OR",
-    description:
-      "CS Major with a focus in Web Development, Cloud Development, and Human-Computer Interactions.",
-    icon: React.createElement(LuGraduationCap),
-    date: "Spring 2024",
-  },
+
   {
     title: "Full Stack Developer",
     employer: "Quantum Vox",
@@ -104,24 +97,37 @@ export const experiencesData = [
       "Quantum Vox is a digital marketing agency based in Portland, Oregon, where I managed a collaboration of designers and other developers to ensure thoughtful and consistent user experience for their clients.",
     icon: React.createElement(FaStackOverflow),
     date: "2024 - active",
+    href: "https://quantum-vox.com",
+  },
+  {
+    title: "Bachelor of Computer Science",
+    employer: "Oregon State University",
+    location: "Corvallis, OR",
+    description:
+      "CS Major with a focus in Web Development, Cloud Development, and Human-Computer Interactions.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024",
+    href: "https://engineering.oregonstate.edu/academics/programs/computer-science/undergraduate/computer-science-applied-human-computer-interaction",
   },
   {
     title: "Network Analyst",
     employer: "Oregon State University",
     location: "Corvallis, OR",
     description:
-      "This was my campus job. I provided phone and email based support using the OSU ticketing system and was responsible to set up and manage back-end VoIP and SIP networking.",
+      "This was my campus job where I provided phone and email based support using the OSU ticketing system and was responsible to set up and manage back-end VoIP and SIP networking.",
     icon: React.createElement(BsHddNetwork),
     date: "2022 - 2024",
+    href: "https://uit.oregonstate.edu/",
   },
   {
     title: "Junior Developer",
     employer: "PT Trisakti",
     location: "Semarang, Indonesia",
     description:
-      "In this 6 month internship I designed and built worker tools using C++ & Visual Studio. The tool allows workers to easily create binary files. I also improved UI of other existing tools",
+      "In this 6 month internship I designed and built worker tools using C++ & Visual Studio. The tool allows workers to easily create binary files. I also built their website using Next.js and motion.dev",
     icon: React.createElement(FaLaptop),
     date: "2021 - 2022",
+    href: "https://trisakti.co.id",
   },
   {
     title: "IT Intern",
@@ -131,15 +137,17 @@ export const experiencesData = [
       "A 9 month internship where I provided IT support for the company and managed a team tasked with the migration of paper records to a digital system.",
     icon: React.createElement(CgWorkAlt),
     date: "2020 - 2021",
+    href: "https://goldeneaglestaffingservices.com/",
   },
   {
     title: "Intern React Developer",
     employer: "HazAdapt, Inc.",
     location: "Corvallis, OR",
     description:
-      "This start-up was my first introduction to React. They had a Wix site and wanted to create their own scalable site and hired student interns looking to learn web development.",
+      "This start-up was my first introduction to React. They previously had a Wix site and wanted to create their own scalable site and hired student interns who are learning web development.",
     icon: React.createElement(FaReact),
     date: "2019",
+    href: "https://www.hazadapt.com/",
   },
 ] as const;
 
@@ -266,11 +274,11 @@ export const techData = [
     icon: React.createElement(SiGraphql),
     href: "https://graphql.org",
   },
-  {
-    title: "Apollo",
-    icon: React.createElement(SiApollographql),
-    href: "https://www.apollographql.com/why-graphql",
-  },
+  // {
+  //   title: "Apollo",
+  //   icon: React.createElement(SiApollographql),
+  //   href: "https://www.apollographql.com/why-graphql",
+  // },
   {
     title: "PowerBI",
     icon: React.createElement(SiPowerbi),
