@@ -174,8 +174,7 @@ export default function Intro() {
             {initialAnimationComplete && (
               <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 0.5 }}
-                transition={{ duration: 1 }}
+                animate={{ opacity: 0.01 }}
                 className="absolute -bottom-2 right-2 text-3xl -rotate-12 animate-pulse"
               >
                 👆

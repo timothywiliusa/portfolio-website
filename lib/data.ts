@@ -183,10 +183,19 @@ export const projectsData = [
   {
     title: "Microservice Architechture",
     description:
-      "I designed and built a web-application for a church. This project implements Next Auth Beta using PostgreSql and Prisma, and audio files are stored using Firebase storage.",
+      "I designed and built a web-application for a church. This project implements Next Auth Beta using PostgreSql and Prisma, and host files with Firebase.",
     tags: ["Next.Js", "Next/Auth", "Firebase", "Lazy Loading"],
     imageUrl:
       "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIoW3gXICDutxLvFoVl609hOfRbTPU7Imd1gpj",
+    href: "https://calvin-presbyterian.vercel.app/",
+  },
+  {
+    title: "Target Client Centric Design",
+    description:
+      "UI/UX design based on target audience, specific target user preferences, by performing an in-depth target user persona research.",
+    tags: ["GoogleTag", "Google Analytics", "User Persona Research", "Next.Js"],
+    imageUrl:
+      "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIbcrP3hKOhyFAsG8VKPtMm5kW2NQXTaLwuH17",
     href: "https://calvin-presbyterian.vercel.app/",
   },
 ] as const;
