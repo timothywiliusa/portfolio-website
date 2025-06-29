@@ -199,7 +199,7 @@ export const projectsData = [
     href: "https://forumpainting.com/",
   },
   {
-    title: "Smooth motion animations",
+    title: "Polished Motion Animations",
     description:
       "Created smooth motion animations for the navbar and buttons using the framer-motion library.",
     tags: ["Framer Motion", "React", "Next.Js", "TailwindCSS"],
