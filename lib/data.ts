@@ -198,6 +198,15 @@ export const projectsData = [
       "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIbcrP3hKOhyFAsG8VKPtMm5kW2NQXTaLwuH17",
     href: "https://forumpainting.com/",
   },
+  {
+    title: "Smooth motion animations",
+    description:
+      "Created smooth motion animations for the navbar and buttons using the framer-motion library.",
+    tags: ["Framer Motion", "React", "Next.Js", "TailwindCSS"],
+    imageUrl:
+      "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkImIZEG9WsYL7ydCb1iJ2u9WnrlfDwOUcNjtkF",
+    href: "https://trisakti.co.id/",
+  },
 ] as const;
 
 export const stackData = [
