@@ -41,11 +41,12 @@ import { VscVscode } from "react-icons/vsc";
 
 export const profileImages = [
   "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIU019bDxyuPjTikwFVz7msMQptAfdqrJX6n9c",
-  // "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIGgB4NzqtbdYiT6as3f24hy5gWwmvDVSBlQKR",
   "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIfhI9XYtiDg3Ik4YvBCNF0ZxQl5KtmoWwH1ne",
   "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkI1qoxy0bwXH3vReyQcMPhxOUItVfl6iBFnCEN",
   "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIKgQPrm4ODLkxgP0yuIARi7h2oGNJa3Hlvpw9",
   "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIR0jkOJpTmsI0p3Lgq7MHxC1tEPWN5VAvfoDe",
+  "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIjYSfaGQ3PMOrve27T49pGDKbWSidJnzFosZ6",
+  // "https://9upxg1g8p4.ufs.sh/f/9pigm30TxnkIVbBko16Pcf20zul1mJHLOwin3rNGUkqxs6D7",
 ] as string[];
 
 export const links = [
@@ -79,11 +80,11 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Looking for a STEM-OPT/H1B job",
+    title: "Looking for a STEM-OPT sponsorship",
     employer: "On-site / Remote",
     location: "USA",
     description:
-      "minimum 20h - prefer 40h - Full stack developer - Cloud API developer - Mobile application developer - React developer - Frontend developer",
+      "20h minimum - Full stack developer - Cloud API developer - Mobile application developer - React developer - Frontend developer",
     icon: React.createElement(MdOutlineBusinessCenter),
     date: "Desired start date: August 4th, 2025",
     href: "#contact",
@@ -94,7 +95,7 @@ export const experiencesData = [
     employer: "Quantum Vox",
     location: "Portland, OR",
     description:
-      "Quantum Vox is a digital marketing agency based in Portland, Oregon, where I managed a collaboration of designers and other developers to ensure thoughtful and consistent user experience for their clients.",
+      "A digital marketing and brand management company based in Portland, Oregon.",
     icon: React.createElement(FaStackOverflow),
     date: "2024 - active",
     href: "https://quantum-vox.com",
@@ -185,7 +186,7 @@ export const projectsData = [
       "I designed and built a web-application for a church. This project implements Next Auth Beta using PostgreSql and Prisma, and audio files are stored using Firebase storage.",
     tags: ["Next.Js", "Next/Auth", "Firebase", "Lazy Loading"],
     imageUrl:
-      "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkICpOVTGUJ6FVtWN4qQ9xUBG2AZmKnj7YX35kT",
+      "https://utfs.io/a/9upxg1g8p4/9pigm30TxnkIoW3gXICDutxLvFoVl609hOfRbTPU7Imd1gpj",
     href: "https://calvin-presbyterian.vercel.app/",
   },
 ] as const;

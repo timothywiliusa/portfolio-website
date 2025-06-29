@@ -28,9 +28,17 @@ export default function Intro() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAlternateBorder, setIsAlternateBorder] = useState(false);
   const [animationCount, setAnimationCount] = useState(0);
+  const [initialAnimationComplete, setInitialAnimationComplete] =
+    useState(false);
 
   useEffect(() => {
-    if (animationCount >= 1) return; // Stop after 1 animation
+    if (animationCount >= 2) {
+      // Mark initial animation as complete
+      setTimeout(() => {
+        setInitialAnimationComplete(true);
+      }, 2000);
+      return;
+    }
 
     const flickerSequence = () => {
       // Initial state change with easing
@@ -50,7 +58,7 @@ export default function Intro() {
         }
       }, (40 + Math.sin((flickerCount / totalFlickers) * Math.PI) * 20) / 3);
 
-      // Wait 3 seconds then do it again with 25 flickers before waiting for another 2 seconds then do it again with 25 flickers
+      // Wait 1 seconds then do it again with 25 flickers before waiting for another 2 seconds then do it again with 25 flickers
       setTimeout(() => {
         let flickerCount = 0;
         const totalFlickers = 50; // 25 flickers before waiting for another second then 25 flickers
@@ -82,7 +90,7 @@ export default function Intro() {
             setAnimationCount((prev) => prev + 1);
           }
         }, (40 + Math.sin((flickerCount / totalFlickers) * Math.PI) * 20) / 3);
-      }, 3000); // wait for 3 seconds
+      }, 1000); // wait for 1 second
     };
 
     // this animation only runs one time
@@ -152,7 +160,7 @@ export default function Intro() {
                           : "border-black dark:border-red-800"
                       }
                       shadow-xl
-                      transition-none
+                      ${initialAnimationComplete ? "" : "transition-none"}
                       ${
                         index === currentImageIndex
                           ? "opacity-100"
@@ -163,6 +171,16 @@ export default function Intro() {
                 </div>
               );
             })}
+            {initialAnimationComplete && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.5 }}
+                transition={{ duration: 1 }}
+                className="absolute -bottom-2 right-2 text-3xl -rotate-12 animate-pulse"
+              >
+                👆
+              </motion.div>
+            )}
           </motion.div>
         </div>
 
@@ -202,9 +220,9 @@ export default function Intro() {
       >
         <div className="max-w-[410px] md:max-w-[550px]">
           I specialize in building (and occasionally designing) full stack web
-          applications, with 5 years of experience in React, Next, Node.js, and
-          microservices architecture. Currently I'm focused on building
-          accessible, human-centered products at{" "}
+          applications, have over 5 years as a React dev, and i'm experienced in
+          microservices architecture and human-computer interactions. Currently
+          I'm focused on building accessible, human-centered products at{" "}
           <Link
             href="https://quantum-vox.com"
             target="_blank"
@@ -230,7 +248,7 @@ export default function Intro() {
         <div className="flex gap-2 flex-row justify-start items-start">
           <a
             className="borderBlack min-w-[170px] group bg-white h-12 w-36 justify-center text-gray-700 flex items-center gap-2 rounded-full  outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer dark:border-red-600 dark:border-4 dark:bg-red-600 dark:text-gray-300 text-sm dark:hover:text-white dark:hover:bg-[#ff0040] dark:hover:border-[#ff0040]"
-            href="https://9upxg1g8p4.ufs.sh/f/9pigm30TxnkIXiShHPjj9XkGJcDOFQ186dahuNfWKwebtSAi"
+            href="https://9upxg1g8p4.ufs.sh/f/9pigm30TxnkIwZWHBsPBeJox3F0XWVN5UOscjG6hukTQapLM"
             target="_blank"
           >
             Resume.pdf

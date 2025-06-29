@@ -13,6 +13,8 @@ import { useTheme } from "@/context/theme-context";
 import { LuGraduationCap } from "react-icons/lu";
 import Link from "next/link";
 
+// https://github.com/stephane-monnot/react-vertical-timeline/issues/171
+
 export default function Experience() {
   const { ref } = useSectionInView("Experience", 0.1);
   const { theme } = useTheme();
@@ -54,9 +56,11 @@ export default function Experience() {
                 <h3 className="fira-code-regular text-[#ff0040] text-lg ">
                   {item.title}
                 </h3>
+
                 <p className="font-normal text-xs !mt-0 pb-3">
                   {item.employer} in {item.location}
                 </p>
+
                 <p className="!mt-1 !font-normal pb-5 text-gray-700 dark:text-white/75">
                   {item.description}
                 </p>
