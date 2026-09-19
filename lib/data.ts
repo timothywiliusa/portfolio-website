@@ -79,23 +79,31 @@ export const links = [
 ] as const;
 
 export const experiencesData = [
-  {
-    title: "Looking for a STEM-OPT sponsorship",
+   {
+    title: "Available for contract work",
     employer: "On-site / Remote",
     location: "USA",
     description:
-      "20h minimum - Full stack developer - Cloud API developer - Mobile application developer - React developer - Frontend developer",
+      "20h/week - Full stack - Cloud API dev - Mobile application dev - React dev - Frontend dev",
     icon: React.createElement(MdOutlineBusinessCenter),
-    date: "Desired start date: August 4th, 2025",
+    date: "Date availability:  Sept 28th, 2026",
     href: "#contact",
   },
-
+  {
+    title: "Full Stack",
+    employer: "GridLint LLC",
+    location: "Portland, OR",
+    description: "Web and app developer based in Portland, Oregon.",
+    icon: React.createElement(FaStackOverflow),
+    date: "2024 - active",
+    href: "https://quantum-vox.com",
+  },
   {
     title: "Full Stack Developer",
     employer: "Quantum Vox",
     location: "Portland, OR",
     description:
-      "A digital marketing and brand management company based in Portland, Oregon.",
+      "Digital marketing and brand management company in Portland, Oregon.",
     icon: React.createElement(FaStackOverflow),
     date: "2024 - active",
     href: "https://quantum-vox.com",
