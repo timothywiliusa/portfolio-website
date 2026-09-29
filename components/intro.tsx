@@ -48,48 +48,59 @@ export default function Intro() {
       // Flicker effect with easing
       let flickerCount = 0;
       const totalFlickers = 24;
-      const flickerInterval = setInterval(() => {
-        if (flickerCount < totalFlickers) {
-          setIsAlternateBorder((prev) => !prev);
-          flickerCount++;
-        } else {
-          clearInterval(flickerInterval);
-          setAnimationCount((prev) => prev + 1);
-        }
-      }, (40 + Math.sin((flickerCount / totalFlickers) * Math.PI) * 20) / 3);
+      const flickerInterval = setInterval(
+        () => {
+          if (flickerCount < totalFlickers) {
+            setIsAlternateBorder((prev) => !prev);
+            flickerCount++;
+          } else {
+            clearInterval(flickerInterval);
+            setAnimationCount((prev) => prev + 1);
+          }
+        },
+        (40 + Math.sin((flickerCount / totalFlickers) * Math.PI) * 20) / 3,
+      );
 
       // Wait 1 seconds then do it again with 25 flickers before waiting for another 2 seconds then do it again with 25 flickers
       setTimeout(() => {
         let flickerCount = 0;
         const totalFlickers = 50; // 25 flickers before waiting for another second then 25 flickers
-        const flickerInterval = setInterval(() => {
-          if (flickerCount < totalFlickers) {
-            if (flickerCount === 25) {
-              // Pause for 2 second after 25 flickers
-              clearInterval(flickerInterval);
-              setTimeout(() => {
+        const flickerInterval = setInterval(
+          () => {
+            if (flickerCount < totalFlickers) {
+              if (flickerCount === 25) {
+                // Pause for 2 second after 25 flickers
+                clearInterval(flickerInterval);
+                setTimeout(() => {
+                  setIsAlternateBorder((prev) => !prev);
+                  flickerCount++;
+                  // Resume flickering after pause
+                  const resumeInterval = setInterval(
+                    () => {
+                      if (flickerCount < totalFlickers) {
+                        setIsAlternateBorder((prev) => !prev);
+                        flickerCount++;
+                      } else {
+                        clearInterval(resumeInterval);
+                        setAnimationCount((prev) => prev + 1);
+                      }
+                    },
+                    (40 +
+                      Math.sin((flickerCount / totalFlickers) * Math.PI) * 20) /
+                      3,
+                  );
+                }, 500); // wait for half a second
+              } else {
                 setIsAlternateBorder((prev) => !prev);
                 flickerCount++;
-                // Resume flickering after pause
-                const resumeInterval = setInterval(() => {
-                  if (flickerCount < totalFlickers) {
-                    setIsAlternateBorder((prev) => !prev);
-                    flickerCount++;
-                  } else {
-                    clearInterval(resumeInterval);
-                    setAnimationCount((prev) => prev + 1);
-                  }
-                }, (40 + Math.sin((flickerCount / totalFlickers) * Math.PI) * 20) / 3);
-              }, 500); // wait for half a second
+              }
             } else {
-              setIsAlternateBorder((prev) => !prev);
-              flickerCount++;
+              clearInterval(flickerInterval);
+              setAnimationCount((prev) => prev + 1);
             }
-          } else {
-            clearInterval(flickerInterval);
-            setAnimationCount((prev) => prev + 1);
-          }
-        }, (40 + Math.sin((flickerCount / totalFlickers) * Math.PI) * 20) / 3);
+          },
+          (40 + Math.sin((flickerCount / totalFlickers) * Math.PI) * 20) / 3,
+        );
       }, 1000); // wait for 1 second
     };
 
@@ -174,7 +185,6 @@ export default function Intro() {
             {initialAnimationComplete && (
               <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 0.01 }}
                 className="absolute -bottom-2 right-2 text-3xl -rotate-12 animate-pulse"
               >
                 👆
